@@ -41,8 +41,8 @@ class CourseController extends Controller
     {
         $formFields = $request->validate([
             'course_id' => ['required', 'unique:courses'],
-            'course_code' => 'nullable',
-            'course_name' => 'nullable',
+            'course_code' => 'required',
+            'course_name' => 'required',
             'course_description' => 'nullable'
         ]);
 
@@ -85,7 +85,7 @@ class CourseController extends Controller
     {
         $formFields = $request->validate([
             'course_id' => ['required', Rule::unique('courses')->ignore($course->id)],
-            'course_code' => 'nullable',
+            'course_code' => 'required',
             'course_name' => 'required',
             'course_description' => 'nullable'
         ]);

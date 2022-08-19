@@ -13,19 +13,19 @@ class studentData extends Model
     
     protected $fillable = ['id', 'first_name', 'last_name', 'dob', 'joining_date', 'reg_no', 'reason', 'fsc_marks', 'fsc_year', 'fsc_div', 'matric_marks', 'matric_year', 'matric_div', 'current_sem', 'phone_number', 'department', 'degree', 'syn', 'img', 'gender'];
 
-    protected static function boot() {
-        parent::boot();
+    // protected static function boot() {
+    //     parent::boot();
 
-        self::creating(function($model) {
-            $model->fsc_marks = ($model->fsc_marks/1100);
-            $model->matric_marks = ($model->matric_marks/1100);
-        }); 
+    //     self::creating(function($model) {
+    //         $model->fsc_marks = ($model->fsc_marks/1100);
+    //         $model->matric_marks = ($model->matric_marks/1100);
+    //     }); 
 
-        self::updating(function($model) {
-            $model->fsc_marks = ($model->fsc_marks/1100);
-            $model->matric_marks = ($model->matric_marks/1100);
-        }); 
-    }
+    //     self::updating(function($model) {
+    //         $model->fsc_marks = ($model->fsc_marks/1100);
+    //         $model->matric_marks = ($model->matric_marks/1100);
+    //     }); 
+    // }
 
     // protected $dateFormat = 'd/m/Y';
 

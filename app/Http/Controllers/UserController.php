@@ -99,7 +99,7 @@ class UserController extends Controller
         
         $fName = explode(' ', $user->name)[0];
 
-        $message = "Your account has successfully been created! Welcome to the dashboard, $fName.";
+        $message = "Your account has successfully been created. Welcome, $fName!";
 
         return response([
             'user' => $user,

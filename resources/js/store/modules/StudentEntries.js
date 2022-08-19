@@ -122,7 +122,7 @@ const actions = {
                             sessionStorage.setItem('CURRENT-USER-ROLE', response.data.user.role)
                             commit('setAuthToken', response.data.token)
                             commit('setFlashMessage', response.data.message)
-                            router.push({name: 'Dashboard'})
+                            router.push({name: 'Home'})
                         }
                     }).catch(error => {
                         if(error.response.status == 422) {
@@ -147,7 +147,7 @@ const actions = {
                             sessionStorage.setItem('CURRENT-USER-ROLE', response.data.user.role)
                             commit('setAuthToken', response.data.token)
                             commit('setFlashMessage', response.data.message)
-                            router.push({name: 'Dashboard'})
+                            router.push({name: 'Home'})
                         }
                     }).catch(error => {
                         if(error.response.status == 401) {

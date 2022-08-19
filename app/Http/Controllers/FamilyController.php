@@ -115,8 +115,8 @@ class FamilyController extends Controller
             // 'mother_occupation' => 'nullable',
             // 'number_siblings' => ['nullable', 'numeric']
             'student_id' => ['required', 'numeric', 'unique:families'],
-            'father_name' => 'nullable',
-            'father_occupation' => 'nullable',
+            'father_name' => 'required',
+            'father_occupation' => 'required',
             'mother_name' => 'nullable',
             'home_phone' => 'nullable',
             'father_phone' => 'nullable',

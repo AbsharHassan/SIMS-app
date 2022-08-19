@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('families', function (Blueprint $table) {
             $table->unsignedBigInteger('student_id');
-            $table->string('father_name')->nullable();
-            $table->string('father_occupation')->nullable();
+            $table->string('father_name');
+            $table->string('father_occupation');
             $table->string('mother_name')->nullable();
             $table->string('mother_occupation')->nullable();
             $table->string('home_phone')->nullable();

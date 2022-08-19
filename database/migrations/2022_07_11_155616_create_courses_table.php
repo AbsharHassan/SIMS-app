@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->unsignedBigInteger('course_id');
-            $table->string('course_code')->nullable();
-            $table->string('course_name')->nullable();
+            $table->string('course_code');
+            $table->string('course_name');
             $table->longText('course_description')->nullable();
             $table->decimal('average', 4, 2)->nullable();
             $table->decimal('std_dev', 4, 2)->nullable();
