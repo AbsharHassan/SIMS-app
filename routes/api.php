@@ -39,10 +39,6 @@ Route::post('/register', [UserController::class, 'store']);
 Route::post('/login', [UserController::class, 'login']);
 
 
-// show all users
-Route::get('/users', [UserController::class, 'show']);
-
-
 
 //********************* PROTECTED ROUTES *********************//
 Route::group(['middleware' => ['auth:sanctum']], function() {
@@ -60,6 +56,9 @@ Route::group(['middleware' => ['auth:sanctum']], function() {
 
     //Change Password
     Route::put('/users/{user}/change-password', [UserController::class, 'changePassword']);
+
+    // show all users
+    Route::get('/users', [UserController::class, 'show']);
 
 
 

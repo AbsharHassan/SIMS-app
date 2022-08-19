@@ -37,21 +37,6 @@ Route::get('/register', [UserController::class, 'registerForm']);
 Route::get('/login', [UserController::class, 'loginForm'])->name('login');
 
 
-//Show create form
-Route::get('/courses/create', [CourseController::class, 'create']);
-        
-Route::get('/courses', [CourseController::class, 'view']);
-
-Route::get('/courses/{id}', [CourseController::class, 'view']); //apply database check
-
-Route::get('/courses/{id}/edit', [CourseController::class, 'view']);
-
-
-Route::get('/students/{id}/edit', [studentDataController::class, 'view']);
-
-Route::get('/students/{id}/family/edit', [studentDataController::class, 'view']);
-
-Route::get('/students/{id}/academics/edit', [studentDataController::class, 'view']);
 
 
 
@@ -60,7 +45,7 @@ Route::get('/students/{id}/academics/edit', [studentDataController::class, 'view
 
 
 //********************* PROTECTED ROUTES *********************//
-// Route::group(['middleware' => ['auth:sanctum']], function() {
+Route::group(['middleware' => ['auth:sanctum']], function() {
         
 
         //HOME PAGE
@@ -112,4 +97,22 @@ Route::get('/students/{id}/academics/edit', [studentDataController::class, 'view
         //Show all users
         Route::get('/list-users', [UserController::class, 'viewAll']);
 
-// });
+
+                //Show create form
+        Route::get('/courses/create', [CourseController::class, 'create']);
+                
+        Route::get('/courses', [CourseController::class, 'view']);
+
+        Route::get('/courses/{id}', [CourseController::class, 'view']); //apply database check
+
+        Route::get('/courses/{id}/edit', [CourseController::class, 'view']);
+
+
+        Route::get('/students/{id}/edit', [studentDataController::class, 'view']);
+
+        Route::get('/students/{id}/family/edit', [studentDataController::class, 'view']);
+
+        Route::get('/students/{id}/academics/edit', [studentDataController::class, 'view']);
+
+
+});
