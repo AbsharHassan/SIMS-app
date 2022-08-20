@@ -196,12 +196,9 @@ export default {
         ...mapActions(['showLogout', 'toggleNavWidth', 'toggleSlideMenu']),
         rotateIcon() {
             if(!this.showNavText) {
-                document.getElementById('expanderIcon').style.rotate = '180deg'
-                this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT') 
+                document.getElementById('expanderIcon').style.rotate = '180deg' 
             } else {
-                document.getElementById('expanderIcon').style.rotate = '0deg' 
-                this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT') 
-
+                document.getElementById('expanderIcon').style.rotate = '0deg'  
             }
         },
         // closeSidebar() {
@@ -210,16 +207,8 @@ export default {
         // }
     },
     computed: {
-        ...mapGetters(['navWidth', 'showNavText', 'showSlideMenu'])
+        ...mapGetters(['navWidth', 'showNavText', 'showSlideMenu',])
     },
-    data() {
-        return {
-            showNav: null,
-        }
-    },
-    created() {
-        this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT')
-    }
 }
 </script>
 

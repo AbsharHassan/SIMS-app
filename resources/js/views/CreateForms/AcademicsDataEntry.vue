@@ -98,7 +98,7 @@ export default {
         async semesterMonitor() {
             if(this.count < this.semesters) {
                 this.count++ 
-                localStorage.starting_sem++
+                sessionStorage.setItem('STARTING_SEM', this.count)
             } else {
                 await this.getAllEntries()
                 this.setFlashMessage('Entry has been created successfully')
@@ -109,11 +109,9 @@ export default {
         ...mapGetters(['loadingStatus, flashMessage', 'navWidth'])
     },
     created() {
-        this.count = localStorage.starting_sem;
+        this.semesters = sessionStorage.getItem('CURRENT_SEM')
+        this.count = sessionStorage.getItem('STARTING_SEM')
         this.student_id = this.$route.params.student_id
-    },
-    mounted() {
-        this.semesters = localStorage.current_sem
     },
     beforeRouteEnter(to, from, next) {
         next(vm => {

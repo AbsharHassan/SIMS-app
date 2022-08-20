@@ -19,6 +19,7 @@ import EditStudent from '../views/EditForms/EditStudent.vue'
 import EditStudentFamily from '../views/EditForms/EditStudentFamily.vue'
 import EditStudentAcademics from '../views/EditForms/EditStudentAcademics.vue'
 import AllUsers from '../views/EntryViews/AllUsers.vue'
+import PasswordRecovery from '../views/PasswordRecovery.vue'
 
 
 const routes = [
@@ -127,6 +128,11 @@ const routes = [
         path: '/all-users',
         name: 'AllUsers',
         conponent: AllUsers
+    },
+    {
+        path: '/password-recovery',
+        name: 'PasswordRecovery',
+        component: PasswordRecovery
     }
 ]
 

@@ -23,10 +23,10 @@ return new class extends Migration
             $table->date('joining_date');
             $table->longText('phone_number');
             $table->string('gender');
-            $table->decimal('fsc_marks');
+            $table->integer('fsc_marks');
             $table->year('fsc_year');
             $table->integer('fsc_div');
-            $table->decimal('matric_marks');
+            $table->integer('matric_marks');
             $table->year('matric_year');
             $table->integer('matric_div');
             $table->integer('current_sem');

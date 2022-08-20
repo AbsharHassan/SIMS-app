@@ -27,6 +27,11 @@ class UserController extends Controller
         return view('layout');
     }
 
+    public function showPasswordRecovery()
+    {
+        return view('layout');
+    }
+
     // show the login form
     public function loginForm(Request $request) 
     {

@@ -20815,7 +20815,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Subject_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Subject.vue */ "./resources/js/components/Subject.vue");
 /* harmony import */ var _components_Button_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Button.vue */ "./resources/js/components/Button.vue");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
-/* harmony import */ var _vue_reactivity__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/reactivity */ "./node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
@@ -20847,11 +20846,39 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     semesterNumber: [Number, String]
   },
   computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapGetters)(['allErrors', 'loadingStatus', 'singleAcademics'])),
-  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)(['addEntryAcademics', 'getSingleEntry'])), {}, {
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_4__.mapActions)(['addEntryAcademics', 'getSingleEntry', 'setFlashMessage'])), {}, {
     updateData: function updateData(data, index) {
-      this.subjectArray[index] = data.subject;
-      this.creditArray[index] = data.credit;
-      this.gradeArray[index] = data.grade;
+      this.formFields["subject_".concat(index)] = data.subject;
+      this.formFields["subject_".concat(index, "_id")] = data.id;
+      this.formFields["subj_credit_".concat(index)] = data.credit;
+      this.formFields["subj_grade_".concat(index)] = data.grade;
+    },
+    removeSubject: function removeSubject(index) {
+      this.showObject[index] = false;
+      this.formFields["subject_".concat(index)] = null;
+      this.formFields["subject_".concat(index, "_id")] = null;
+      this.formFields["subj_credit_".concat(index)] = null;
+      this.formFields["subj_grade_".concat(index)] = null;
+      this.semesterArray["subject_".concat(index)] = null;
+      this.semesterArray["subject_".concat(index, "_id")] = null;
+      this.semesterArray["subj_credit_".concat(index)] = null;
+      this.semesterArray["subj_grade_".concat(index)] = null;
+    },
+    addSubject: function addSubject() {
+      var minEmpty = 0;
+
+      for (var i = 1; i <= 10; i++) {
+        if (!this.showObject[i]) {
+          minEmpty = i;
+          break;
+        }
+      }
+
+      if (minEmpty) {
+        this.showObject[minEmpty] = true;
+      } else {
+        this.setFlashMessage('10 is the maximum number of subjects per semester.');
+      }
     },
     entrySuccess: function entrySuccess() {
       this.$emit('entrySuccess');
@@ -20860,73 +20887,77 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
-        var i, _i, _Object$keys, key, _i2, _Object$keys2, _key, _i3, _Object$keys3, _key2;
-
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                i = 1;
-
-                for (_i = 0, _Object$keys = Object.keys(_this.subjectFormFields); _i < _Object$keys.length; _i++) {
-                  key = _Object$keys[_i];
-                  _this.subjectFormFields[key] = _this.subjectArray[i];
-                  i++;
-                }
-
-                i = 1;
-
-                for (_i2 = 0, _Object$keys2 = Object.keys(_this.creditFormFields); _i2 < _Object$keys2.length; _i2++) {
-                  _key = _Object$keys2[_i2];
-                  _this.creditFormFields[_key] = _this.creditArray[i];
-                  i++;
-                }
-
-                i = 1;
-
-                for (_i3 = 0, _Object$keys3 = Object.keys(_this.gradeFormFields); _i3 < _Object$keys3.length; _i3++) {
-                  _key2 = _Object$keys3[_i3];
-                  _this.gradeFormFields[_key2] = _this.gradeArray[i];
-                  i++;
-                }
-
-                _this.formFields = _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, _this.formFields), _this.subjectFormFields), _this.creditFormFields), _this.gradeFormFields);
-                _this.formFields.student_id = _this.$route.params.student_id;
-                _this.formFields.semester = _this.$props.semesterNumber;
                 e.preventDefault();
-                _context.next = 12;
+                _context.next = 3;
                 return _this.addEntryAcademics(_this.formFields);
 
-              case 12:
+              case 3:
                 if (Object.keys(_this.allErrors).length == 0) {
                   _this.entrySuccess();
-
-                  _this.numberSubjects = 0;
                 }
 
-              case 13:
+              case 4:
               case "end":
                 return _context.stop();
             }
           }
         }, _callee);
       }))();
-    },
-    addSubject: function addSubject() {
-      if (this.numberSubjects < 10) {
-        this.numberSubjects++;
-      }
-    }
+    } // async onSubmit(e) {
+    //     var i = 1;
+    //     for(const key of Object.keys(this.subjectFormFields)) {
+    //         this.subjectFormFields[key] = this.subjectArray[i]
+    //         i++
+    //     }
+    //     i = 1;
+    //     for(const key of Object.keys(this.creditFormFields)) {
+    //         this.creditFormFields[key] = this.creditArray[i]
+    //         i++
+    //     }
+    //     i = 1;
+    //     for(const key of Object.keys(this.gradeFormFields)) {
+    //         this.gradeFormFields[key] = this.gradeArray[i]
+    //         i++
+    //     }
+    //     this.formFields = {...this.formFields, ...this.subjectFormFields, ...this.creditFormFields, ...this.gradeFormFields}
+    //     this.formFields.student_id = this.$route.params.student_id
+    //     this.formFields.semester = this.$props.semesterNumber
+    //     e.preventDefault();
+    //     await this.addEntryAcademics(this.formFields);
+    //     if(Object.keys(this.allErrors).length == 0) {
+    //         this.entrySuccess();
+    //         this.numberSubjects = 0;
+    //     }
+    // },
+    // addSubject() {
+    //     if(this.numberSubjects < 10) {
+    //         this.numberSubjects++
+    //     }
+    // }
+
   }),
   data: function data() {
     return {
-      show: (0,_vue_reactivity__WEBPACK_IMPORTED_MODULE_5__.ref)(),
+      showObject: {
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: false,
+        6: false,
+        7: false,
+        8: false,
+        9: false,
+        10: false
+      },
       numberSubjects: null,
       formFields: {
         student_id: null,
-        semester: null
-      },
-      subjectFormFields: {
+        semester: null,
         subject_1: null,
         subject_2: null,
         subject_3: null,
@@ -20936,9 +20967,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         subject_7: null,
         subject_8: null,
         subject_9: null,
-        subject_10: null
-      },
-      subjectIdFromFields: {
+        subject_10: null,
         subject_1_id: null,
         subject_2_id: null,
         subject_3_id: null,
@@ -20948,9 +20977,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         subject_7_id: null,
         subject_8_id: null,
         subject_9_id: null,
-        subject_10_id: null
-      },
-      creditFormFields: {
+        subject_10_id: null,
         subj_credit_1: null,
         subj_credit_2: null,
         subj_credit_3: null,
@@ -20960,9 +20987,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         subj_credit_7: null,
         subj_credit_8: null,
         subj_credit_9: null,
-        subj_credit_10: null
-      },
-      gradeFormFields: {
+        subj_credit_10: null,
         subj_grade_1: null,
         subj_grade_2: null,
         subj_grade_3: null,
@@ -20974,48 +20999,87 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         subj_grade_9: null,
         subj_grade_10: null
       },
-      subjectArray: [],
-      creditArray: [],
-      gradeArray: [],
-      semeserArray: [],
+      // subjectFormFields: {
+      //     subject_1: null,
+      //     subject_2: null,
+      //     subject_3: null,
+      //     subject_4: null,
+      //     subject_5: null,
+      //     subject_6: null,
+      //     subject_7: null,
+      //     subject_8: null,
+      //     subject_9: null,
+      //     subject_10: null,
+      // },
+      // subjectIdFromFields: {
+      //     subject_1_id: null,
+      //     subject_2_id: null,
+      //     subject_3_id: null,
+      //     subject_4_id: null,
+      //     subject_5_id: null,
+      //     subject_6_id: null,
+      //     subject_7_id: null,
+      //     subject_8_id: null,
+      //     subject_9_id: null,
+      //     subject_10_id: null,
+      // },
+      // creditFormFields: {
+      //     subj_credit_1: null,
+      //     subj_credit_2: null,
+      //     subj_credit_3: null,
+      //     subj_credit_4: null,
+      //     subj_credit_5: null,
+      //     subj_credit_6: null,
+      //     subj_credit_7: null,
+      //     subj_credit_8: null,
+      //     subj_credit_9: null,
+      //     subj_credit_10: null,
+      // },
+      // gradeFormFields: {
+      //     subj_grade_1: null,
+      //     subj_grade_2: null,
+      //     subj_grade_3: null,
+      //     subj_grade_4: null,
+      //     subj_grade_5: null,
+      //     subj_grade_6: null,
+      //     subj_grade_7: null,
+      //     subj_grade_8: null,
+      //     subj_grade_9: null,
+      //     subj_grade_10: null,
+      // },
+      // subjectArray: [],
+      // creditArray: [],
+      // gradeArray: [],
+      semesterArray: [],
       count: 0
     };
   },
-  created: function created() {
-    var _this2 = this;
-
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee2() {
-      var x;
-      return _regeneratorRuntime().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return _this2.getSingleEntry(_this2.$route.params.student_id);
-
-            case 2:
-              console.log(_this2.singleAcademics); // console.log()
-
-              _this2.semeserArray = _this2.singleAcademics[_this2.semesterNumber - 1];
-              console.log(_this2.semeserArray);
-
-              for (x = 1; x <= 10; x++) {
-                if (_this2.semeserArray["subject_".concat(x)]) {
-                  _this2.count = _this2.count + 1;
-                }
-              }
-
-              console.log(_this2.count);
-              _this2.show = 0;
-              _this2.numberSubjects = _this2.count;
-
-            case 9:
-            case "end":
-              return _context2.stop();
+  watch: {
+    numberSubjects: function numberSubjects(newNumberSubjects, oldNumberSubjects) {
+      for (var key in this.showObject) {
+        if (this.showObject.hasOwnProperty(key)) {
+          if (key <= newNumberSubjects) {
+            this.showObject[key] = true;
           }
         }
-      }, _callee2);
-    }))();
+      }
+    }
+  },
+  created: function created() {
+    this.formFields.student_id = this.$route.params.student_id;
+    this.formFields.semester = this.semesterNumber; // await this.getSingleEntry(this.$route.params.student_id)
+    // console.log(this.singleAcademics)
+    // // console.log()
+    // this.semesterArray = this.singleAcademics[this.semesterNumber - 1]
+    // console.log(this.semesterArray)
+    // for(let x = 1; x <= 10; x++) {
+    //     if(this.semesterArray[`subject_${x}`]) {
+    //         this.count = this.count + 1
+    //     }
+    // }
+    // console.log(this.count)
+    // this.show = 0;
+    // this.numberSubjects = this.count;
   }
 });
 
@@ -21118,10 +21182,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.formFields["subject_".concat(index, "_id")] = null;
       this.formFields["subj_credit_".concat(index)] = null;
       this.formFields["subj_grade_".concat(index)] = null;
-      this.semeserArray["subject_".concat(index)] = null;
-      this.semeserArray["subject_".concat(index, "_id")] = null;
-      this.semeserArray["subj_credit_".concat(index)] = null;
-      this.semeserArray["subj_grade_".concat(index)] = null;
+      this.semesterArray["subject_".concat(index)] = null;
+      this.semesterArray["subject_".concat(index, "_id")] = null;
+      this.semesterArray["subj_credit_".concat(index)] = null;
+      this.semesterArray["subj_grade_".concat(index)] = null;
     },
     addSubject: function addSubject() {
       var minEmpty = 0;
@@ -21136,7 +21200,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       if (minEmpty) {
         this.showObject[minEmpty] = true;
       } else {
-        this.setFlashMessage('10 is the maximum number of subjects.');
+        this.setFlashMessage('10 is the maximum number of subjects per semester');
       }
     },
     updateData: function updateData(data, index) {
@@ -21234,7 +21298,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         subj_grade_10: null
       },
       numberSubjects: null,
-      semeserArray: [],
+      semesterArray: [],
       count: 0,
       loadingOpacity: 1
     };
@@ -21251,14 +21315,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   },
   created: function created() {
-    this.semeserArray = [];
+    this.semesterArray = [];
     this.loadingOpacity = 1; // await this.getSingleEntry(this.$route.params.student_id)
-    // this.semeserArray = this.singleAcademics[this.semesterNumber - 1]
+    // this.semesterArray = this.singleAcademics[this.semesterNumber - 1]
 
-    this.semeserArray = this.academicsObject[this.semesterNumber - 1];
+    this.semesterArray = this.academicsObject[this.semesterNumber - 1];
 
     for (var x = 1; x <= 10; x++) {
-      if (this.semeserArray["subject_".concat(x)]) {
+      if (this.semesterArray["subject_".concat(x)]) {
         this.count = this.count + 1;
       }
     }
@@ -21268,7 +21332,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     for (var key in this.formFields) {
       if (this.formFields.hasOwnProperty(key)) {
-        this.formFields[key] = this.semeserArray[key];
+        this.formFields[key] = this.semesterArray[key];
       }
     }
   },
@@ -21304,10 +21368,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     rotateIcon: function rotateIcon() {
       if (!this.showNavText) {
         document.getElementById('expanderIcon').style.rotate = '180deg';
-        this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT');
       } else {
         document.getElementById('expanderIcon').style.rotate = '0deg';
-        this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT');
       }
     } // closeSidebar() {
     //     document.getElementById('slideBar').style.width = '0'
@@ -21315,15 +21377,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     // }
 
   }),
-  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(['navWidth', 'showNavText', 'showSlideMenu'])),
-  data: function data() {
-    return {
-      showNav: null
-    };
-  },
-  created: function created() {
-    this.showNav = sessionStorage.getItem('SHOW-NAV-TEXT');
-  }
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)(['navWidth', 'showNavText', 'showSlideMenu']))
 });
 
 /***/ }),
@@ -21518,8 +21572,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _SelectInput_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SelectInput.vue */ "./resources/js/components/SelectInput.vue");
+/* harmony import */ var _BaseInput_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BaseInput.vue */ "./resources/js/components/BaseInput.vue");
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Subject',
+  components: {
+    BaseInput: _BaseInput_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    SelectInput: _SelectInput_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   props: {
     keyProp: Number,
     semesterNumber: Number,
@@ -21527,25 +21589,38 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     changeMonitor: function changeMonitor() {
-      this.$emit('changeMonitor', this.formFields);
+      this.$emit('changeMonitor', this.formFields); // console.log(this.formFields)
     },
     addSubject: function addSubject() {
       this.$emit('addSubject');
+    },
+    removeSubject: function removeSubject() {
+      this.$emit('removeSubject');
     }
   },
   data: function data() {
     return {
-      key: null,
+      someKey: null,
       formFields: {
         subject: null,
         id: null,
         credit: null,
         grade: null
+      },
+      gradeBag: {
+        'A': "A",
+        'B+': "B+",
+        'B': "B",
+        'C+': "C+",
+        'C': "C",
+        'D+': "D+",
+        'D': "D",
+        'F': "F"
       }
     };
   },
   created: function created() {
-    this.key = this.$props.keyProp;
+    this.someKey = this.$props.keyProp;
   }
 });
 
@@ -21752,7 +21827,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
                 }
 
                 _this.count++;
-                localStorage.starting_sem++;
+                sessionStorage.setItem('STARTING_SEM', _this.count);
                 _context.next = 8;
                 break;
 
@@ -21774,11 +21849,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }),
   computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_7__.mapGetters)(['loadingStatus, flashMessage', 'navWidth'])),
   created: function created() {
-    this.count = localStorage.starting_sem;
+    this.semesters = sessionStorage.getItem('CURRENT_SEM');
+    this.count = sessionStorage.getItem('STARTING_SEM');
     this.student_id = this.$route.params.student_id;
-  },
-  mounted: function mounted() {
-    this.semesters = localStorage.current_sem;
   },
   beforeRouteEnter: function beforeRouteEnter(to, from, next) {
     next(function (vm) {
@@ -21989,6 +22062,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
               case 3:
                 if (Object.keys(_this.allErrors).length == 0) {
                   localStorage.current_sem = _this.formFields.current_sem;
+                  sessionStorage.setItem('CURRENT_SEM', _this.formFields.current_sem);
+                  sessionStorage.setItem('STARTING_SEM', 1);
 
                   _this.$router.push({
                     name: 'FamilyDataEntry',
@@ -23725,6 +23800,31 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasicAuthenticationInput.vue */ "./resources/js/components/BasicAuthenticationInput.vue");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'PasswordRecovery',
+  components: {
+    BasicAuthenticationInput: _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  created: function created() {
+    console.log('i have been created');
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/Register.vue?vue&type=script&lang=js":
 /*!*********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/Register.vue?vue&type=script&lang=js ***!
@@ -24469,13 +24569,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["value"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_EntrySegment, {
     title: "FSC",
-    value: $props.entry.fsc_marks * 100 + '%',
+    value: $props.entry.fsc_marks,
     "class": "hidden xl:flex xl:flex-col xl:justify-center"
   }, null, 8
   /* PROPS */
   , ["value"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_EntrySegment, {
     title: "Matric",
-    value: $props.entry.matric_marks * 100 + '%',
+    value: $props.entry.matric_marks,
     "class": "hidden xl:flex xl:flex-col xl:justify-center"
   }, null, 8
   /* PROPS */
@@ -25124,12 +25224,42 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "text-lg sm:text-xl font-bold my-2 underline underline-offset-4"
 };
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _this = this;
+var _hoisted_2 = {
+  id: "slideButton",
+  "class": "text-center sm:text-right mt-4",
+  key: "button"
+};
 
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-plus-lg text-xl mx-7"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_4 = [_hoisted_3];
+var _hoisted_5 = {
+  "class": "text-center mb-6 sm:mb-0 flex justify-center",
+  key: "submitter"
+};
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "font-bold"
+}, " Processing ", -1
+/* HOISTED */
+);
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-arrow-repeat"
+})], -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_Loading = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Loading");
 
   var _component_Subject = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Subject");
+
+  var _component_Button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Button");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Loading, {
     active: _ctx.loadingStatus,
@@ -25147,7 +25277,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   , ["active", "opacity"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h4", _hoisted_1, "Semester " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.semesterNumber), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
-    onSubmit: _cache[2] || (_cache[2] = function () {
+    onSubmit: _cache[3] || (_cache[3] = function () {
       return $options.onSubmit && $options.onSubmit.apply($options, arguments);
     })
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.TransitionGroup, {
@@ -25156,10 +25286,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     appear: ""
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-for=\"number in this.numberSubjects\" :key=\"number\">\r\n                            <Subject :keyProp=\"number\" @changeMonitor=\"updateData($event, number)\" key=\"number\" @addSubject=\"addSubject()\"/>\r\n                        </div>\r\n                        <div v-if=\"numberSubjects < 10\" id=\"slideButton\" class=\"text-center sm:text-right mt-4\" key=\"button\">\r\n                            <span @click=\"addSubject()\" class=\"hover:bg-black transition duration-300 bg-sky-700 rounded-md py-1 text-white hover:cursor-pointer \">\r\n                                <i class=\"bi bi-plus-lg text-xl mx-7\"></i>\r\n                            </span>\r\n                        </div>\r\n                        <div class=\"text-center mb-6 sm:mb-0 flex justify-center\" key=\"submitter\">\r\n                            <Button text=\"Create Semester Entry\" class=\"m-0 mt-6 py-3 px-6 rounded-md bg-sky-700 text-white text-xs font-normal hover:bg-black h-12 w-full sm:max-w-[300px]\" @submit=\"onSubmit\">\r\n                                <template #extraText v-if=\"loadingStatus\">\r\n                                    <span class=\"font-bold\">\r\n                                        Processing\r\n                                    </span>\r\n                                </template>\r\n                                <template #spinnerIcon v-if=\"loadingStatus\">\r\n                                    <span>\r\n                                        <i class=\"bi bi-arrow-repeat\"></i>\r\n                                    </span>  \r\n                                </template>\r\n                            </Button>\r\n                        </div> "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(_this.numberSubjects, function (number) {
-        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-for=\"number in this.numberSubjects\" :key=\"number\">\r\n                            <Subject :keyProp=\"number\" @changeMonitor=\"updateData($event, number)\" key=\"number\" @addSubject=\"addSubject()\"/>\r\n                        </div>\r\n                        <div v-if=\"numberSubjects < 10\" id=\"slideButton\" class=\"text-center sm:text-right mt-4\" key=\"button\">\r\n                            <span @click=\"addSubject()\" class=\"hover:bg-black transition duration-300 bg-sky-700 rounded-md py-1 text-white hover:cursor-pointer \">\r\n                                <i class=\"bi bi-plus-lg text-xl mx-7\"></i>\r\n                            </span>\r\n                        </div>\r\n                        <div class=\"text-center mb-6 sm:mb-0 flex justify-center\" key=\"submitter\">\r\n                            <Button text=\"Create Semester Entry\" class=\"m-0 mt-6 py-3 px-6 rounded-md bg-sky-700 text-white text-xs font-normal hover:bg-black h-12 w-full sm:max-w-[300px]\" @submit=\"onSubmit\">\r\n                                <template #extraText v-if=\"loadingStatus\">\r\n                                    <span class=\"font-bold\">\r\n                                        Processing\r\n                                    </span>\r\n                                </template>\r\n                                <template #spinnerIcon v-if=\"loadingStatus\">\r\n                                    <span>\r\n                                        <i class=\"bi bi-arrow-repeat\"></i>\r\n                                    </span>  \r\n                                </template>\r\n                            </Button>\r\n                        </div> "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(10, function (number) {
+        return (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
           key: number
-        }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Subject, {
+        }, [$data.showObject[number] ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_Subject, {
           keyProp: number,
           onChangeMonitor: function onChangeMonitor($event) {
             return $options.updateData($event, number);
@@ -25167,13 +25297,41 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           key: "number",
           onAddSubject: _cache[1] || (_cache[1] = function ($event) {
             return $options.addSubject();
-          })
+          }),
+          onRemoveSubject: function onRemoveSubject($event) {
+            return $options.removeSubject(number);
+          }
         }, null, 8
         /* PROPS */
-        , ["keyProp", "onChangeMonitor"])]);
-      }), 128
-      /* KEYED_FRAGMENT */
-      ))];
+        , ["keyProp", "onChangeMonitor", "onRemoveSubject"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
+      }), 64
+      /* STABLE_FRAGMENT */
+      )), $data.numberSubjects < 10 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+        onClick: _cache[2] || (_cache[2] = function ($event) {
+          return $options.addSubject();
+        }),
+        "class": "hover:bg-black transition duration-300 bg-sky-700 rounded-md py-1 text-white hover:cursor-pointer"
+      }, _hoisted_4)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Button, {
+        text: "Create Semester Entry",
+        "class": "m-0 mt-6 py-3 px-6 rounded-md bg-sky-700 text-white text-xs font-normal hover:bg-black h-12 w-full sm:max-w-[300px]",
+        onSubmit: $options.onSubmit
+      }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createSlots)({
+        _: 2
+        /* DYNAMIC */
+
+      }, [_ctx.loadingStatus ? {
+        name: "extraText",
+        fn: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_6];
+        })
+      } : undefined, _ctx.loadingStatus ? {
+        name: "spinnerIcon",
+        fn: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+          return [_hoisted_7];
+        })
+      } : undefined]), 1032
+      /* PROPS, DYNAMIC_SLOTS */
+      , ["onSubmit"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-for=\"number in this.numberSubjects\" :key=\"number\">\r\n                            <Subject :keyProp=\"number\" @changeMonitor=\"updateData($event, number)\" key=\"number\" @addSubject=\"addSubject()\"/>\r\n                        </div> ")];
     }),
     _: 1
     /* STABLE */
@@ -25347,7 +25505,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           onAddSubject: _cache[1] || (_cache[1] = function ($event) {
             return $options.addSubject();
           }),
-          semesterFormFields: $data.semeserArray,
+          semesterFormFields: $data.semesterArray,
           onRemoveSubject: function onRemoveSubject($event) {
             return $options.removeSubject(number);
           }
@@ -25941,114 +26099,105 @@ var _hoisted_1 = {
   "class": "bg-slate-100/60 rounded-md mt-6 px-3 border shadow-lg hover:shadow-2xl hover:border-blue-300 transition duration-500"
 };
 var _hoisted_2 = {
-  "class": "sm:text-base font-bold mb-1 mt-4"
+  "class": "flex justify-between items-center sm:text-base font-bold mb-1 mt-4"
+};
+var _hoisted_3 = {
+  "class": "flex items-center justify-end pt-1 pr-1.5 text-lg"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-x-lg"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_5 = [_hoisted_4];
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", {
   "class": "w-[30%] text-black"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_4 = {
+var _hoisted_7 = {
   "class": "mt-4 md:flex"
 };
-var _hoisted_5 = {
+var _hoisted_8 = {
   "class": "basis-[40%] md:pr-3 mb-6"
 };
-
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "inline-block text-md mb-2 font-medium"
-}, "Title", -1
-/* HOISTED */
-);
-
-var _hoisted_7 = {
-  "class": "basis-[20%] md:pr-3 mb-6"
-};
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "inline-block text-md mb-2 font-medium"
-}, "Subject ID", -1
-/* HOISTED */
-);
-
 var _hoisted_9 = {
   "class": "basis-[20%] md:pr-3 mb-6"
 };
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "inline-block text-md mb-2 font-medium"
-}, "Credit Hours", -1
-/* HOISTED */
-);
-
+var _hoisted_10 = {
+  "class": "basis-[20%] md:pr-3 mb-6"
+};
 var _hoisted_11 = {
   "class": "basis-[20%] mb-6"
 };
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
-  "class": "inline-block text-md mb-2 font-medium"
-}, "Grade Obtained", -1
-/* HOISTED */
-);
-
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<option value=\"A\">A</option><option value=\"B+\">B+</option><option value=\"B\">B</option><option value=\"C+\">C+</option><option value=\"C\">C</option><option value=\"D+\">D+</option><option value=\"D\">D</option><option value=\"F\">F</option>", 8);
-
-var _hoisted_21 = [_hoisted_13];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _this = this;
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, "Subject " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.key), 1
+  var _component_BaseInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BaseInput");
+
+  var _component_SelectInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SelectInput");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, " Subject " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.someKey), 1
   /* TEXT */
-  ), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    "class": "bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]",
-    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+    "class": "hover: cursor-pointer",
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return $options.removeSubject();
+    })
+  }, _hoisted_5)])]), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <label class=\"inline-block text-md mb-2 font-medium\">Title</label>\r\n            <input type=\"text\" class=\"bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]\" v-model=\"this.formFields.subject\" @input=\"changeMonitor()\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BaseInput, {
+    name: "Title",
+    "class": "h-[45px]",
+    modelValue: this.formFields.subject,
+    "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return _this.formFields.subject = $event;
     }),
-    onInput: _cache[1] || (_cache[1] = function ($event) {
+    onChange: _cache[2] || (_cache[2] = function ($event) {
       return $options.changeMonitor();
     })
-  }, null, 544
-  /* HYDRATE_EVENTS, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, this.formFields.subject]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "text",
-    "class": "bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]",
-    "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
+  }, null, 8
+  /* PROPS */
+  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <label class=\"inline-block text-md mb-2 font-medium\">Subject ID</label>\r\n            <input type=\"text\" class=\"bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]\" v-model=\"this.formFields.id\" @input=\"changeMonitor()\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BaseInput, {
+    name: "Subject ID",
+    "class": "h-[45px]",
+    modelValue: this.formFields.id,
+    "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return _this.formFields.id = $event;
     }),
-    onInput: _cache[3] || (_cache[3] = function ($event) {
+    onInput: _cache[4] || (_cache[4] = function ($event) {
       return $options.changeMonitor();
     })
-  }, null, 544
-  /* HYDRATE_EVENTS, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, this.formFields.id]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-    type: "number",
-    min: "1",
-    max: "8",
-    step: "1",
-    "class": "bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]",
-    "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
+  }, null, 8
+  /* PROPS */
+  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <label class=\"inline-block text-md mb-2 font-medium\">Credit Hours</label>\r\n            <input type=\"number\" min=\"1\" max=\"8\" step=\"1\" class=\"bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]\" v-model=\"this.formFields.credit\" @input=\"changeMonitor()\"/> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BaseInput, {
+    name: "Credit Hours",
+    "class": "h-[45px]",
+    modelValue: this.formFields.credit,
+    "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return _this.formFields.credit = $event;
     }),
-    onInput: _cache[5] || (_cache[5] = function ($event) {
+    onInput: _cache[6] || (_cache[6] = function ($event) {
       return $options.changeMonitor();
     })
-  }, null, 544
-  /* HYDRATE_EVENTS, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, this.formFields.credit]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("select", {
-    "onUpdate:modelValue": _cache[6] || (_cache[6] = function ($event) {
+  }, null, 8
+  /* PROPS */
+  , ["modelValue"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <label class=\"inline-block text-md mb-2 font-medium\">Grade Obtained</label>\r\n            <select v-model=\"formFields.grade\" id=\"grade\" class=\"bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]\" @change=\"changeMonitor()\">\r\n              <option value=\"A\">A</option>\r\n              <option value=\"B+\">B+</option>\r\n              <option value=\"B\">B</option>\r\n              <option value=\"C+\">C+</option>\r\n              <option value=\"C\">C</option>\r\n              <option value=\"D+\">D+</option>\r\n              <option value=\"D\">D</option>\r\n              <option value=\"F\">F</option>\r\n            </select> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SelectInput, {
+    name: "Grade",
+    modelValue: $data.formFields.grade,
+    "onUpdate:modelValue": _cache[7] || (_cache[7] = function ($event) {
       return $data.formFields.grade = $event;
     }),
-    id: "grade",
-    "class": "bg-slate-200 border border-slate-400 rounded p-2 w-full focus:outline-none focus:border-2 focus:border-cyan-700 transition duration-1000 h-[40px]",
-    onChange: _cache[7] || (_cache[7] = function ($event) {
+    optionBag: this.gradeBag,
+    "class": "h-[45px]",
+    onChange: _cache[8] || (_cache[8] = function ($event) {
       return $options.changeMonitor();
     })
-  }, _hoisted_21, 544
-  /* HYDRATE_EVENTS, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelSelect, $data.formFields.grade]])])])])]);
+  }, null, 8
+  /* PROPS */
+  , ["modelValue", "optionBag"])])])])]);
 }
 
 /***/ }),
@@ -30695,13 +30844,13 @@ var _hoisted_1 = {
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", {
   "class": "max-w-lg mx-auto px-2 md:px-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", {
-  "class": "text-xl sm:text-3xl text-center mx-auto mt-10 pb-1 md:text-3xl font-bold"
+  "class": "text-xl sm:text-3xl text-center mx-auto mt-16 sm:mt-10 pb-1 md:text-3xl font-bold"
 }, "Student Information Management System")], -1
 /* HOISTED */
 );
 
 var _hoisted_3 = {
-  "class": "max-w-lg mx-auto p-3 mb-10 mt-6 md:p-0"
+  "class": "max-w-lg mx-auto p-3 mb-5 mt-3 sm:mb-10 sm:mt-6 md:p-0"
 };
 var _hoisted_4 = {
   "class": "bg-white/40 hover:bg-white/60 rounded-lg shadow-lg hover:shadow-2xl transition duration-500 p-8 md:p-12"
@@ -30857,6 +31006,47 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* STABLE */
 
   }), _hoisted_23])])])])]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22 ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "flex justify-center items-center"
+};
+var _hoisted_2 = {
+  "class": "max-w-lg max-h-[300px] bg-white/40 rounded-md"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" help ");
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_BasicAuthenticationInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BasicAuthenticationInput");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicAuthenticationInput, {
+    modelValue: _ctx.formFields.email,
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return _ctx.formFields.email = $event;
+    }),
+    name: "Email",
+    type: "email",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(_ctx.allErrors == 401 ? 'border-red-600' : ''),
+    objKey: "email"
+  }, null, 8
+  /* PROPS */
+  , ["modelValue", "class"]), _hoisted_3])]);
 }
 
 /***/ }),
@@ -31068,7 +31258,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 /* harmony import */ var _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/modules/StudentEntries */ "./resources/js/store/modules/StudentEntries.js");
 /* harmony import */ var _views_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../views/Home.vue */ "./resources/js/views/Home.vue");
 /* harmony import */ var _views_EntryViews_someShit_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/EntryViews/someShit.vue */ "./resources/js/views/EntryViews/someShit.vue");
@@ -31088,7 +31278,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_EditForms_EditStudentFamily_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../views/EditForms/EditStudentFamily.vue */ "./resources/js/views/EditForms/EditStudentFamily.vue");
 /* harmony import */ var _views_EditForms_EditStudentAcademics_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../views/EditForms/EditStudentAcademics.vue */ "./resources/js/views/EditForms/EditStudentAcademics.vue");
 /* harmony import */ var _views_EntryViews_AllUsers_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../views/EntryViews/AllUsers.vue */ "./resources/js/views/EntryViews/AllUsers.vue");
+/* harmony import */ var _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../views/PasswordRecovery.vue */ "./resources/js/views/PasswordRecovery.vue");
 /* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
+
 
 
 
@@ -31197,9 +31389,13 @@ var routes = [{
   path: '/all-users',
   name: 'AllUsers',
   conponent: _views_EntryViews_AllUsers_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
+}, {
+  path: '/password-recovery',
+  name: 'PasswordRecovery',
+  component: _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_19__["default"]
 }];
-var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_19__.createRouter)({
-  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_19__.createWebHistory)(process.env.APP_URL),
+var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_20__.createRouter)({
+  history: (0,vue_router__WEBPACK_IMPORTED_MODULE_20__.createWebHistory)(process.env.APP_URL),
   routes: routes
 });
 router.beforeEach(function (to, from, next) {
@@ -31307,7 +31503,7 @@ var state = {
   deleteTarget: '',
   logoutMessage: 'You will be logged out. Do you wish to proceed?',
   showLogoutBox: false,
-  showNavText: sessionStorage.getItem('SHOW-NAV-TEXT'),
+  showNavText: true,
   navWidth: 120,
   gridClasses: 'xl:grid-cols-[120px_minmax(120px,_1fr)]',
   showSlideMenu: false
@@ -31466,7 +31662,7 @@ var actions = {
                   commit('setAuthToken', response.data.token);
                   commit('setFlashMessage', response.data.message);
                   _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
-                    name: 'Dashboard'
+                    name: 'Home'
                   });
                 }
               })["catch"](function (error) {
@@ -31511,7 +31707,7 @@ var actions = {
                   commit('setAuthToken', response.data.token);
                   commit('setFlashMessage', response.data.message);
                   _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
-                    name: 'Dashboard'
+                    name: 'Home'
                   });
                 }
               })["catch"](function (error) {
@@ -31744,8 +31940,6 @@ var actions = {
               commit('setFlashMessage', '');
               _context9.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/students/".concat(id, "/academics/create")).then(function (response) {
-                console.log(response);
-
                 if (response.data.canProceed) {
                   _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
                     name: 'AcademicsDataEntry',
@@ -58757,6 +58951,34 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/views/PasswordRecovery.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/views/PasswordRecovery.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PasswordRecovery_vue_vue_type_template_id_6cd98f22__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PasswordRecovery.vue?vue&type=template&id=6cd98f22 */ "./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22");
+/* harmony import */ var _PasswordRecovery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PasswordRecovery.vue?vue&type=script&lang=js */ "./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js");
+/* harmony import */ var C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_PasswordRecovery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_PasswordRecovery_vue_vue_type_template_id_6cd98f22__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/PasswordRecovery.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/views/Register.vue":
 /*!*****************************************!*\
   !*** ./resources/js/views/Register.vue ***!
@@ -59524,6 +59746,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PasswordRecovery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PasswordRecovery_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PasswordRecovery.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/views/Register.vue?vue&type=script&lang=js":
 /*!*****************************************************************!*\
   !*** ./resources/js/views/Register.vue?vue&type=script&lang=js ***!
@@ -60272,6 +60510,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Login_vue_vue_type_template_id_12f5395a__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Login_vue_vue_type_template_id_12f5395a__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Login.vue?vue&type=template&id=12f5395a */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/Login.vue?vue&type=template&id=12f5395a");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22 ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PasswordRecovery_vue_vue_type_template_id_6cd98f22__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_PasswordRecovery_vue_vue_type_template_id_6cd98f22__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./PasswordRecovery.vue?vue&type=template&id=6cd98f22 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/PasswordRecovery.vue?vue&type=template&id=6cd98f22");
 
 
 /***/ }),

@@ -30,8 +30,8 @@ use App\Http\Controllers\studentDataController;
 //Show register form
 Route::get('/register', [UserController::class, 'registerForm']);
 
-
-
+//Password Recovery form
+Route::get('/password-recovery', [UserController::class, 'showPasswordRecovery']);
         
 //Show login form
 Route::get('/login', [UserController::class, 'loginForm'])->name('login');

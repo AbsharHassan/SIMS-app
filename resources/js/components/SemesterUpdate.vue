@@ -9,7 +9,7 @@
                     <transition-group name="subject" mode="out-in" appear>
                         <div v-for="number in 10" :key="number">
                             <div v-if="showObject[number]">
-                                <SubjectUpdate :keyProp="number" @changeMonitor="updateData($event, (number))" key="number" @addSubject="addSubject()" :semesterFormFields="semeserArray" @removeSubject="removeSubject(number)"/>
+                                <SubjectUpdate :keyProp="number" @changeMonitor="updateData($event, (number))" key="number" @addSubject="addSubject()" :semesterFormFields="semesterArray" @removeSubject="removeSubject(number)"/>
                             </div>
                         </div>
                         <div v-if="numberSubjects < 10" id="slideButton" class="text-center sm:text-right mt-4" key="button">
@@ -72,10 +72,10 @@ export default {
             this.formFields[`subject_${index}_id`] = null
             this.formFields[`subj_credit_${index}`] = null
             this.formFields[`subj_grade_${index}`] = null
-            this.semeserArray[`subject_${index}`] = null
-            this.semeserArray[`subject_${index}_id`] = null
-            this.semeserArray[`subj_credit_${index}`] = null
-            this.semeserArray[`subj_grade_${index}`] = null
+            this.semesterArray[`subject_${index}`] = null
+            this.semesterArray[`subject_${index}_id`] = null
+            this.semesterArray[`subj_credit_${index}`] = null
+            this.semesterArray[`subj_grade_${index}`] = null
         },
         addSubject() {
             var minEmpty = 0
@@ -88,7 +88,7 @@ export default {
             if(minEmpty) {
                 this.showObject[minEmpty] = true
             } else {
-                this.setFlashMessage('10 is the maximum number of subjects.')
+                this.setFlashMessage('10 is the maximum number of subjects per semester')
             }
         },
         updateData(data, index) {
@@ -168,7 +168,7 @@ export default {
                 subj_grade_10: null,
             },
             numberSubjects: null,
-            semeserArray: [],
+            semesterArray: [],
             count: 0,
             loadingOpacity: 1,
         }
@@ -185,14 +185,14 @@ export default {
         }
     },
     created() {
-        this.semeserArray = []
+        this.semesterArray = []
         this.loadingOpacity = 1
         // await this.getSingleEntry(this.$route.params.student_id)
         
-        // this.semeserArray = this.singleAcademics[this.semesterNumber - 1]
-        this.semeserArray = this.academicsObject[this.semesterNumber - 1]
+        // this.semesterArray = this.singleAcademics[this.semesterNumber - 1]
+        this.semesterArray = this.academicsObject[this.semesterNumber - 1]
         for(let x = 1; x <= 10; x++) {
-            if(this.semeserArray[`subject_${x}`]) {
+            if(this.semesterArray[`subject_${x}`]) {
                 this.count = this.count + 1
             }
         }
@@ -200,7 +200,7 @@ export default {
         this.numberSubjects = this.count;
         for (const key in this.formFields) {
             if(this.formFields.hasOwnProperty(key)) {
-                this.formFields[key] = this.semeserArray[key]
+                this.formFields[key] = this.semesterArray[key]
             }
         }
     },

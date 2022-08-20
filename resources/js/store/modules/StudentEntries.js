@@ -36,7 +36,7 @@ const state = {
     deleteTarget: '',
     logoutMessage: 'You will be logged out. Do you wish to proceed?',
     showLogoutBox: false,
-    showNavText: sessionStorage.getItem('SHOW-NAV-TEXT'),
+    showNavText: true,
     navWidth: 120,
     gridClasses: 'xl:grid-cols-[120px_minmax(120px,_1fr)]',
     showSlideMenu: false,
@@ -259,7 +259,6 @@ const actions = {
         commit('setFlashMessage', '')
         await axios.get(`/api/students/${id}/academics/create`)
         .then(response => {
-            console.log(response)
             if(response.data.canProceed) {
                 router.push({name: 'AcademicsDataEntry', params: {student_id: id}})
             } else {

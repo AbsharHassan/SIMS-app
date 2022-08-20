@@ -130,7 +130,7 @@ class studentDataController extends Controller
                 'degree' => ['required', 'numeric', 'gte:40', 'lte:44'],
                 'syn' => 'required',
                 'reason' => 'nullable',
-                'img' => 'required'
+                'img' => 'nullable'
             ]);
     
             // if($request->hasFile('img')) {

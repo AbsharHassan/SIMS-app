@@ -247,6 +247,8 @@ export default {
             await this.addEntryStudent(this.formFields);
             if(Object.keys(this.allErrors).length == 0) {
                 localStorage.current_sem = this.formFields.current_sem
+                sessionStorage.setItem('CURRENT_SEM', this.formFields.current_sem)
+                sessionStorage.setItem('STARTING_SEM', 1)
                 this.$router.push({name: 'FamilyDataEntry', params: {student_id: this.formFields.id}})
             }
         },

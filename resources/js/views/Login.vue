@@ -2,9 +2,9 @@
     <div class="sm:overflow-hidden">
         <div>
             <header class="max-w-lg mx-auto px-2 md:px-0">
-                <h1 class="text-xl sm:text-3xl text-center mx-auto mt-10 pb-1 md:text-3xl font-bold">Student Information Management System</h1>
+                <h1 class="text-xl sm:text-3xl text-center mx-auto mt-16 sm:mt-10 pb-1 md:text-3xl font-bold">Student Information Management System</h1>
             </header>
-            <main class="max-w-lg mx-auto p-3 mb-10 mt-6 md:p-0">
+            <main class="max-w-lg mx-auto p-3 mb-5 mt-3 sm:mb-10 sm:mt-6 md:p-0">
                 <div class="bg-white/40 hover:bg-white/60 rounded-lg shadow-lg hover:shadow-2xl transition duration-500 p-8 md:p-12">
                     <h3 class="font-bold text-lg sm:text-2xl">Welcome to the Login Page</h3>
                     <p class="text-slate-600 pt-5">Sign into your account.</p>

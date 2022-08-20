@@ -7,7 +7,7 @@
                         <i class="bi bi-x-lg"></i>
                     </button>
                 </div>
-                <div class=" basis-[85%] flex items-center text-center font-medium">
+                <div class="basis-[85%] flex items-center text-center font-medium">
                     {{ logoutMessage }}
                 </div>
             </div>

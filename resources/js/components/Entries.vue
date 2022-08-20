@@ -6,8 +6,8 @@
                 <EntrySegment title="Name" :value="entry.first_name + ' ' + entry.last_name" class="flex flex-col justify-center text-center sm:col-span-2"/>
                 <EntrySegment title="Age" :value="entry.age + ' years old'" class="flex flex-col justify-center"/>
                 <EntrySegment title="Degree" :value="entry.department + '-' + entry.degree + '-' + entry.syn" class="hidden lg:flex lg:flex-col lg:justify-center"/>
-                <EntrySegment title="FSC" :value="entry.fsc_marks*100+ '%'" class="hidden xl:flex xl:flex-col xl:justify-center"/>
-                <EntrySegment title="Matric" :value="entry.matric_marks*100 + '%'" class="hidden xl:flex xl:flex-col xl:justify-center"/>
+                <EntrySegment title="FSC" :value="entry.fsc_marks" class="hidden xl:flex xl:flex-col xl:justify-center"/>
+                <EntrySegment title="Matric" :value="entry.matric_marks" class="hidden xl:flex xl:flex-col xl:justify-center"/>
             </div> 
         </div>
     </div>
