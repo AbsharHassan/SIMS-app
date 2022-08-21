@@ -33,23 +33,23 @@
                     </div>
                     <div class="w-full mt-3 sm:mt-0 h-[200px] sm:h-[350px] py-2 sm:py-0 border-y-2 border-y-slate-200 flex items-center justify-center">
                         <div v-if="histogram">
-                            <BarChart :chartData="chartData" :chartOptions="chartOptions" label="marks distribution" class="min-w-[190px] w-[99%] sm:w-[300px] h-[190px] sm:h-[300px]"/>
+                            <BarChart :chartData="chartData" :chartOptions="chartOptions" label="marks distribution" class="min-w-[190px] w-[99%] sm:w-[300px] h-[190px] sm:h-[300px]" :key="fieldKey1"/>
                         </div>
                         <div v-else class="text-sky-500">
                             Course data not available. 
                         </div>
                     </div>
                     <div class="flex my-1 px-2 mt-2 w-full">
-                        <BasicEntry title="Title" :value="singleCourse.course_name" class="w-full"/>
+                        <BasicEntry title="Title" :value="singleCourse.course_name" class="w-full" :key="fieldKey2"/>
                     </div>
                     <div class="flex my-1 px-2 mt-2 w-full">
-                        <BasicEntry title="Code" :value="singleCourse.course_code" class="w-full"/>
+                        <BasicEntry title="Code" :value="singleCourse.course_code" class="w-full" :key="fieldKey3"/>
                     </div>
                      <div class="flex my-1 px-2 mt-2 w-full">
-                        <BasicEntry title="Average" :value="singleCourse.average" class="w-full"/>
+                        <BasicEntry title="Average" :value="singleCourse.average" class="w-full" :key="fieldKey4"/>
                     </div>
                     <div class="flex my-1 px-2 mt-2 w-full">
-                        <BasicEntry title="Std Deviation" :value="singleCourse.std_dev" class="w-full"/>
+                        <BasicEntry title="Std Deviation" :value="singleCourse.std_dev" class="w-full" :key="fieldKey5"/>
                     </div>
                     <div class="my-1 px-2  w-full mt-4">
                         <div class="font-medium text-center">
@@ -105,7 +105,12 @@ export default {
                 responsive: true,
                 maintainAspectRatio: false
             },
-            loadingCancel: true
+            loadingCancel: true,
+            fieldKey1: 0,
+            fieldKey2: 0,
+            fieldKey3: 0,
+            fieldKey4: 0,
+            fieldKey5: 0,
         }
     },
     computed: {
@@ -154,6 +159,11 @@ export default {
         this.loadingOpacity = 1
         await this.getSingleCourse(this.$route.params.course_id)
         await this.getSubjectHistogram(this.$route.params.course_id)
+        this.fieldKey1++
+        this.fieldKey2++
+        this.fieldKey3++
+        this.fieldKey4++
+        this.fieldKey5++
     },
     destroyed() {
         this.loadingOpacity = 0.4
