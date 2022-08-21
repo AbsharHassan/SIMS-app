@@ -23714,6 +23714,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   created: function created() {
     var _this = this;
 
+    console.log('createdd');
     var dataSwitcherControl = setInterval(function () {
       _this.switchData();
     }, 2000);

@@ -129,6 +129,7 @@ export default {
         }
     },
     created() {
+        console.log('createdd')
         var dataSwitcherControl = setInterval(() => {
             this.switchData()
         }, 2000)
