@@ -31,10 +31,13 @@ use App\Http\Controllers\studentDataController;
 Route::get('/register', [UserController::class, 'registerForm']);
 
 //Password Recovery form
-Route::get('/password-recovery', [UserController::class, 'showPasswordRecovery']);
+Route::get('/forgot-password', [UserController::class, 'showPasswordRecovery']);
         
 //Show login form
 Route::get('/login', [UserController::class, 'loginForm'])->name('login');
+
+//Reset Password View
+Route::get('/reset-password/{token}', [UserController::class, 'showPasswordResetForm'])->middleware('guest')->name('password.reset');
 
 
 

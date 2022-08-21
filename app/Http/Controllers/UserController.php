@@ -2,15 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
+// use Illuminate\Validation\Rules\Password;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\Rules\Password;
-use Symfony\Component\HttpFoundation\Session\Session;
-
 use function PHPSTORM_META\elementType;
+
+use Illuminate\Support\Facades\Password;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class UserController extends Controller
 {
@@ -30,6 +32,15 @@ class UserController extends Controller
     public function showPasswordRecovery()
     {
         return view('layout');
+    }
+
+    public function showPasswordResetForm($token) 
+    {
+        return view('layout', ['token' => $token]);
+
+        // return [
+        //     'token' => $token
+        // ];
     }
 
     // show the login form
@@ -262,6 +273,37 @@ class UserController extends Controller
                 'message' => 'Details successfully updated.'
             ], 200);
         }
+    }
+
+    public function forgotPasswordForm(Request $request) 
+    {
+
+        // return 'help';
+        $request->validate(['email' => 'required|email']);
+
+        // \Mail::send('test', function ($message) {
+        //     $message->from('john@johndoe.com', 'John Doe');
+        //     $message->sender('john@johndoe.com', 'John Doe');
+        //     $message->to('john@johndoe.com', 'John Doe');
+        //     $message->cc('john@johndoe.com', 'John Doe');
+        //     $message->bcc('john@johndoe.com', 'John Doe');
+        //     $message->replyTo('john@johndoe.com', 'John Doe');
+        //     $message->subject('Subject');
+        //     $message->priority(3);
+        //     $message->attach('pathToFile');
+        // });
         
+        // dd($request['email']);
+ 
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+        
+
+        // dd($status);
+
+        return $status === Password::RESET_LINK_SENT
+                    ? ['status' => __($status)]
+                    : ['email' => __($status)];
     }
 }

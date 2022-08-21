@@ -38,6 +38,9 @@ Route::post('/register', [UserController::class, 'store']);
 //Login
 Route::post('/login', [UserController::class, 'login']);
 
+//Forgot Password
+Route::post('/forgot-password', [UserController::class, 'forgotPasswordForm'])->middleware('guest')->name('password.email');
+
 
 
 //********************* PROTECTED ROUTES *********************//

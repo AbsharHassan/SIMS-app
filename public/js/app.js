@@ -23084,23 +23084,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js ***!
-  \********************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'AllUsers'
-});
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/ListUsers.vue?vue&type=script&lang=js":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/ListUsers.vue?vue&type=script&lang=js ***!
@@ -23440,6 +23423,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_EducationHistory_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/EducationHistory.vue */ "./resources/js/components/EducationHistory.vue");
 /* harmony import */ var _components_GPASection_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/GPASection.vue */ "./resources/js/components/GPASection.vue");
 /* harmony import */ var _components_SemesterDetails_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/SemesterDetails.vue */ "./resources/js/components/SemesterDetails.vue");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -23471,7 +23462,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       loadingCancel: true,
       loadingOpacity: null,
       academicsIndex: null,
-      showSemDetails: false
+      showSemDetails: false,
+      BasicInfoKey: 0,
+      EducationHistoryKey: 0,
+      GPASectionKey: 0,
+      SemesterDetailsKey: 0
     };
   },
   methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_8__.mapActions)(['getSingleEntry'])), {}, {
@@ -23497,8 +23492,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   }),
   computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_8__.mapGetters)(['singleStudent', 'singleFamily', 'singleAcademics', 'loadingStatus', 'navWidth'])),
   created: function created() {
-    this.loadingOpacity = 1;
-    this.getSingleEntry(this.$route.params.student_id);
+    var _this = this;
+
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+      return _regeneratorRuntime().wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _this.loadingOpacity = 1;
+              _context.next = 3;
+              return _this.getSingleEntry(_this.$route.params.student_id);
+
+            case 3:
+              _this.BasicInfoKey++;
+              console.log(_this.BasicInfoKey);
+              _this.EducationHistoryKey++;
+              console.log(_this.EducationHistoryKey);
+              _this.GPASectionKey++;
+              console.log(_this.GPASectionKey);
+              _this.SemesterDetailsKey++;
+              console.log(_this.SemesterDetailsKey);
+
+            case 11:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }))();
   }
 });
 
@@ -23516,6 +23537,83 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=script&lang=js":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=script&lang=js ***!
+  \************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasicAuthenticationInput.vue */ "./resources/js/components/BasicAuthenticationInput.vue");
+/* harmony import */ var _components_Button_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Button.vue */ "./resources/js/components/Button.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _regeneratorRuntime() { "use strict"; /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */ _regeneratorRuntime = function _regeneratorRuntime() { return exports; }; var exports = {}, Op = Object.prototype, hasOwn = Op.hasOwnProperty, $Symbol = "function" == typeof Symbol ? Symbol : {}, iteratorSymbol = $Symbol.iterator || "@@iterator", asyncIteratorSymbol = $Symbol.asyncIterator || "@@asyncIterator", toStringTagSymbol = $Symbol.toStringTag || "@@toStringTag"; function define(obj, key, value) { return Object.defineProperty(obj, key, { value: value, enumerable: !0, configurable: !0, writable: !0 }), obj[key]; } try { define({}, ""); } catch (err) { define = function define(obj, key, value) { return obj[key] = value; }; } function wrap(innerFn, outerFn, self, tryLocsList) { var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator, generator = Object.create(protoGenerator.prototype), context = new Context(tryLocsList || []); return generator._invoke = function (innerFn, self, context) { var state = "suspendedStart"; return function (method, arg) { if ("executing" === state) throw new Error("Generator is already running"); if ("completed" === state) { if ("throw" === method) throw arg; return doneResult(); } for (context.method = method, context.arg = arg;;) { var delegate = context.delegate; if (delegate) { var delegateResult = maybeInvokeDelegate(delegate, context); if (delegateResult) { if (delegateResult === ContinueSentinel) continue; return delegateResult; } } if ("next" === context.method) context.sent = context._sent = context.arg;else if ("throw" === context.method) { if ("suspendedStart" === state) throw state = "completed", context.arg; context.dispatchException(context.arg); } else "return" === context.method && context.abrupt("return", context.arg); state = "executing"; var record = tryCatch(innerFn, self, context); if ("normal" === record.type) { if (state = context.done ? "completed" : "suspendedYield", record.arg === ContinueSentinel) continue; return { value: record.arg, done: context.done }; } "throw" === record.type && (state = "completed", context.method = "throw", context.arg = record.arg); } }; }(innerFn, self, context), generator; } function tryCatch(fn, obj, arg) { try { return { type: "normal", arg: fn.call(obj, arg) }; } catch (err) { return { type: "throw", arg: err }; } } exports.wrap = wrap; var ContinueSentinel = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} var IteratorPrototype = {}; define(IteratorPrototype, iteratorSymbol, function () { return this; }); var getProto = Object.getPrototypeOf, NativeIteratorPrototype = getProto && getProto(getProto(values([]))); NativeIteratorPrototype && NativeIteratorPrototype !== Op && hasOwn.call(NativeIteratorPrototype, iteratorSymbol) && (IteratorPrototype = NativeIteratorPrototype); var Gp = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(IteratorPrototype); function defineIteratorMethods(prototype) { ["next", "throw", "return"].forEach(function (method) { define(prototype, method, function (arg) { return this._invoke(method, arg); }); }); } function AsyncIterator(generator, PromiseImpl) { function invoke(method, arg, resolve, reject) { var record = tryCatch(generator[method], generator, arg); if ("throw" !== record.type) { var result = record.arg, value = result.value; return value && "object" == _typeof(value) && hasOwn.call(value, "__await") ? PromiseImpl.resolve(value.__await).then(function (value) { invoke("next", value, resolve, reject); }, function (err) { invoke("throw", err, resolve, reject); }) : PromiseImpl.resolve(value).then(function (unwrapped) { result.value = unwrapped, resolve(result); }, function (error) { return invoke("throw", error, resolve, reject); }); } reject(record.arg); } var previousPromise; this._invoke = function (method, arg) { function callInvokeWithMethodAndArg() { return new PromiseImpl(function (resolve, reject) { invoke(method, arg, resolve, reject); }); } return previousPromise = previousPromise ? previousPromise.then(callInvokeWithMethodAndArg, callInvokeWithMethodAndArg) : callInvokeWithMethodAndArg(); }; } function maybeInvokeDelegate(delegate, context) { var method = delegate.iterator[context.method]; if (undefined === method) { if (context.delegate = null, "throw" === context.method) { if (delegate.iterator["return"] && (context.method = "return", context.arg = undefined, maybeInvokeDelegate(delegate, context), "throw" === context.method)) return ContinueSentinel; context.method = "throw", context.arg = new TypeError("The iterator does not provide a 'throw' method"); } return ContinueSentinel; } var record = tryCatch(method, delegate.iterator, context.arg); if ("throw" === record.type) return context.method = "throw", context.arg = record.arg, context.delegate = null, ContinueSentinel; var info = record.arg; return info ? info.done ? (context[delegate.resultName] = info.value, context.next = delegate.nextLoc, "return" !== context.method && (context.method = "next", context.arg = undefined), context.delegate = null, ContinueSentinel) : info : (context.method = "throw", context.arg = new TypeError("iterator result is not an object"), context.delegate = null, ContinueSentinel); } function pushTryEntry(locs) { var entry = { tryLoc: locs[0] }; 1 in locs && (entry.catchLoc = locs[1]), 2 in locs && (entry.finallyLoc = locs[2], entry.afterLoc = locs[3]), this.tryEntries.push(entry); } function resetTryEntry(entry) { var record = entry.completion || {}; record.type = "normal", delete record.arg, entry.completion = record; } function Context(tryLocsList) { this.tryEntries = [{ tryLoc: "root" }], tryLocsList.forEach(pushTryEntry, this), this.reset(!0); } function values(iterable) { if (iterable) { var iteratorMethod = iterable[iteratorSymbol]; if (iteratorMethod) return iteratorMethod.call(iterable); if ("function" == typeof iterable.next) return iterable; if (!isNaN(iterable.length)) { var i = -1, next = function next() { for (; ++i < iterable.length;) { if (hasOwn.call(iterable, i)) return next.value = iterable[i], next.done = !1, next; } return next.value = undefined, next.done = !0, next; }; return next.next = next; } } return { next: doneResult }; } function doneResult() { return { value: undefined, done: !0 }; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, define(Gp, "constructor", GeneratorFunctionPrototype), define(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = define(GeneratorFunctionPrototype, toStringTagSymbol, "GeneratorFunction"), exports.isGeneratorFunction = function (genFun) { var ctor = "function" == typeof genFun && genFun.constructor; return !!ctor && (ctor === GeneratorFunction || "GeneratorFunction" === (ctor.displayName || ctor.name)); }, exports.mark = function (genFun) { return Object.setPrototypeOf ? Object.setPrototypeOf(genFun, GeneratorFunctionPrototype) : (genFun.__proto__ = GeneratorFunctionPrototype, define(genFun, toStringTagSymbol, "GeneratorFunction")), genFun.prototype = Object.create(Gp), genFun; }, exports.awrap = function (arg) { return { __await: arg }; }, defineIteratorMethods(AsyncIterator.prototype), define(AsyncIterator.prototype, asyncIteratorSymbol, function () { return this; }), exports.AsyncIterator = AsyncIterator, exports.async = function (innerFn, outerFn, self, tryLocsList, PromiseImpl) { void 0 === PromiseImpl && (PromiseImpl = Promise); var iter = new AsyncIterator(wrap(innerFn, outerFn, self, tryLocsList), PromiseImpl); return exports.isGeneratorFunction(outerFn) ? iter : iter.next().then(function (result) { return result.done ? result.value : iter.next(); }); }, defineIteratorMethods(Gp), define(Gp, toStringTagSymbol, "Generator"), define(Gp, iteratorSymbol, function () { return this; }), define(Gp, "toString", function () { return "[object Generator]"; }), exports.keys = function (object) { var keys = []; for (var key in object) { keys.push(key); } return keys.reverse(), function next() { for (; keys.length;) { var key = keys.pop(); if (key in object) return next.value = key, next.done = !1, next; } return next.done = !0, next; }; }, exports.values = values, Context.prototype = { constructor: Context, reset: function reset(skipTempReset) { if (this.prev = 0, this.next = 0, this.sent = this._sent = undefined, this.done = !1, this.delegate = null, this.method = "next", this.arg = undefined, this.tryEntries.forEach(resetTryEntry), !skipTempReset) for (var name in this) { "t" === name.charAt(0) && hasOwn.call(this, name) && !isNaN(+name.slice(1)) && (this[name] = undefined); } }, stop: function stop() { this.done = !0; var rootRecord = this.tryEntries[0].completion; if ("throw" === rootRecord.type) throw rootRecord.arg; return this.rval; }, dispatchException: function dispatchException(exception) { if (this.done) throw exception; var context = this; function handle(loc, caught) { return record.type = "throw", record.arg = exception, context.next = loc, caught && (context.method = "next", context.arg = undefined), !!caught; } for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i], record = entry.completion; if ("root" === entry.tryLoc) return handle("end"); if (entry.tryLoc <= this.prev) { var hasCatch = hasOwn.call(entry, "catchLoc"), hasFinally = hasOwn.call(entry, "finallyLoc"); if (hasCatch && hasFinally) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } else if (hasCatch) { if (this.prev < entry.catchLoc) return handle(entry.catchLoc, !0); } else { if (!hasFinally) throw new Error("try statement without catch or finally"); if (this.prev < entry.finallyLoc) return handle(entry.finallyLoc); } } } }, abrupt: function abrupt(type, arg) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc <= this.prev && hasOwn.call(entry, "finallyLoc") && this.prev < entry.finallyLoc) { var finallyEntry = entry; break; } } finallyEntry && ("break" === type || "continue" === type) && finallyEntry.tryLoc <= arg && arg <= finallyEntry.finallyLoc && (finallyEntry = null); var record = finallyEntry ? finallyEntry.completion : {}; return record.type = type, record.arg = arg, finallyEntry ? (this.method = "next", this.next = finallyEntry.finallyLoc, ContinueSentinel) : this.complete(record); }, complete: function complete(record, afterLoc) { if ("throw" === record.type) throw record.arg; return "break" === record.type || "continue" === record.type ? this.next = record.arg : "return" === record.type ? (this.rval = this.arg = record.arg, this.method = "return", this.next = "end") : "normal" === record.type && afterLoc && (this.next = afterLoc), ContinueSentinel; }, finish: function finish(finallyLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.finallyLoc === finallyLoc) return this.complete(entry.completion, entry.afterLoc), resetTryEntry(entry), ContinueSentinel; } }, "catch": function _catch(tryLoc) { for (var i = this.tryEntries.length - 1; i >= 0; --i) { var entry = this.tryEntries[i]; if (entry.tryLoc === tryLoc) { var record = entry.completion; if ("throw" === record.type) { var thrown = record.arg; resetTryEntry(entry); } return thrown; } } throw new Error("illegal catch attempt"); }, delegateYield: function delegateYield(iterable, resultName, nextLoc) { return this.delegate = { iterator: values(iterable), resultName: resultName, nextLoc: nextLoc }, "next" === this.method && (this.arg = undefined), ContinueSentinel; } }, exports; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'GetPassword',
+  components: {
+    BasicAuthenticationInput: _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Button: _components_Button_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapActions)(['setFlashMessage', 'forgotPasswordForm'])), {}, {
+    flashRedirect: function flashRedirect() {
+      this.setFlashMessage('A recovery link will be sent to this email. (Feature in progress)');
+      this.$router.push({
+        name: 'Login'
+      });
+    },
+    onSubmit: function onSubmit(e) {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
+        return _regeneratorRuntime().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                e.preventDefault();
+                _context.next = 3;
+                return _this.forgotPasswordForm(_this.formFields);
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  }),
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_2__.mapGetters)(['allErrors', 'loadingStatus'])),
+  data: function data() {
+    return {
+      formFields: {
+        email: null
+      }
+    };
+  }
+});
 
 /***/ }),
 
@@ -23811,17 +23909,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/BasicAuthenticationInput.vue */ "./resources/js/components/BasicAuthenticationInput.vue");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: 'PasswordRecovery',
-  components: {
-    BasicAuthenticationInput: _components_BasicAuthenticationInput_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  created: function created() {
-    console.log('i have been created');
-  }
-});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -24506,14 +24594,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicEntry, {
     title: "HSSC (FSC)",
-    value: $props.singleStudent.fsc_marks * 100 + '%',
+    value: $props.singleStudent.fsc_marks,
     underlineControl: $data.width > '768' ? false : true,
     "class": "lg:w-[80%] sm:mr-3 md:flex"
   }, null, 8
   /* PROPS */
   , ["value", "underlineControl"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicEntry, {
     title: "SSC (Matric)",
-    value: $props.singleStudent.matric_marks * 100 + '%',
+    value: $props.singleStudent.matric_marks,
     underlineControl: $data.width > '768' ? false : true,
     "class": "lg:w-[80%] md:flex"
   }, null, 8
@@ -29788,25 +29876,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b":
-/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, " help ");
-}
-
-/***/ }),
-
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/ListUsers.vue?vue&type=template&id=84e1ae54":
 /*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/ListUsers.vue?vue&type=template&id=84e1ae54 ***!
@@ -30574,16 +30643,18 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["to"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicInfo, {
+  , ["to"])]), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_BasicInfo, {
     singleStudent: _ctx.singleStudent,
-    singleFamily: _ctx.singleFamily
+    singleFamily: _ctx.singleFamily,
+    key: $data.BasicInfoKey
   }, null, 8
   /* PROPS */
-  , ["singleStudent", "singleFamily"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_EducationHistory, {
-    singleStudent: _ctx.singleStudent
+  , ["singleStudent", "singleFamily"])), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_EducationHistory, {
+    singleStudent: _ctx.singleStudent,
+    key: $data.EducationHistoryKey
   }, null, 8
   /* PROPS */
-  , ["singleStudent"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_GPASection, {
+  , ["singleStudent"])), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_GPASection, {
     singleAcademics: _ctx.singleAcademics,
     currentSem: _ctx.singleStudent.current_sem,
     reasons: _ctx.singleStudent.reason,
@@ -30592,20 +30663,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     onLoadingOpacityModifier: _cache[2] || (_cache[2] = function ($event) {
       return $options.loadingOpacityModifier();
-    })
+    }),
+    key: $data.GPASectionKey
   }, null, 8
   /* PROPS */
-  , ["singleAcademics", "currentSem", "reasons"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.Transition, {
+  , ["singleAcademics", "currentSem", "reasons"])), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(vue__WEBPACK_IMPORTED_MODULE_0__.Transition, {
     name: "detailSection",
     appear: ""
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [$data.showSemDetails ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_SemesterDetails, {
-        key: 0,
         onCloseSemDetails: _cache[3] || (_cache[3] = function ($event) {
           return $options.closeSemDetails();
         }),
-        academicsData: _ctx.singleAcademics["".concat(_this.academicsIndex - 1)]
+        academicsData: _ctx.singleAcademics["".concat(_this.academicsIndex - 1)],
+        key: $data.SemesterDetailsKey
       }, null, 8
       /* PROPS */
       , ["academicsData"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)];
@@ -30635,6 +30707,101 @@ __webpack_require__.r(__webpack_exports__);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, " please help ");
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742":
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742 ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "h-screen flex items-center justify-center"
+};
+var _hoisted_2 = {
+  "class": "bg-white/60 hover:bg-white/80 transition duration-300 sm:w-[600px] sm:h-[300px] rounded-md p-3"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+  "class": "font-bold text-lg sm:text-2xl"
+}, "Recover Password", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-slate-600 pt-5"
+}, "Enter the email associated with your account.", -1
+/* HOISTED */
+);
+
+var _hoisted_5 = {
+  "class": "mt-6"
+};
+var _hoisted_6 = {
+  "class": "mb-6 pt-3 rounded bg-slate-200/75 max-w-md mx-auto"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Processing ");
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+  "class": "bi bi-arrow-repeat"
+})], -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_BasicAuthenticationInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BasicAuthenticationInput");
+
+  var _component_Button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Button");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[1] || (_cache[1] = function () {
+      return $options.onSubmit && $options.onSubmit.apply($options, arguments);
+    })
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicAuthenticationInput, {
+    modelValue: $data.formFields.email,
+    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
+      return $data.formFields.email = $event;
+    }),
+    name: "Email",
+    type: "email",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(_ctx.allErrors == 401 ? 'border-red-600' : ''),
+    objKey: "email"
+  }, null, 8
+  /* PROPS */
+  , ["modelValue", "class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Button, {
+    text: !_ctx.loadingStatus ? 'Submit' : '',
+    processingPresent: true,
+    "class": "w-[400px] mx-auto mt-10 h-[50px]",
+    onClick: $options.onSubmit
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createSlots)({
+    _: 2
+    /* DYNAMIC */
+
+  }, [_ctx.loadingStatus ? {
+    name: "extraText",
+    fn: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_7];
+    })
+  } : undefined, _ctx.loadingStatus ? {
+    name: "spinnerIcon",
+    fn: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_8];
+    })
+  } : undefined]), 1032
+  /* PROPS, DYNAMIC_SLOTS */
+  , ["text", "onClick"])], 32
+  /* HYDRATE_EVENTS */
+  )])])]);
 }
 
 /***/ }),
@@ -30898,12 +31065,7 @@ var _hoisted_15 = {
   key: 0
 };
 
-var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
-  href: "#",
-  "class": "text-sm text-sky-600 hover:text-sky-700 hover:underline mb-6"
-}, "Forgot your password?")], -1
-/* HOISTED */
-);
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Forgot your password?");
 
 var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Processing ");
 
@@ -30929,9 +31091,9 @@ var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_BasicAuthenticationInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BasicAuthenticationInput");
 
-  var _component_Button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Button");
-
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  var _component_Button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Button");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     "class": "flex flex-col",
@@ -30970,7 +31132,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["modelValue", "type", "class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_ctx.allErrors == 401 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_15, " Invalid Creditentials. ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), _hoisted_16])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Button, {
+  , ["modelValue", "type", "class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_ctx.allErrors == 401 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_15, " Invalid Creditentials. ")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: {
+      name: 'GetPassword'
+    },
+    "class": "text-sm text-sky-600 hover:text-sky-700 hover:underline mb-6"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_16];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Button, {
     text: !_ctx.loadingStatus ? 'Sign In' : '',
     processingPresent: true,
     "class": "mt-5 h-[50px]",
@@ -31021,32 +31195,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-
-var _hoisted_1 = {
-  "class": "flex justify-center items-center"
-};
-var _hoisted_2 = {
-  "class": "max-w-lg max-h-[300px] bg-white/40 rounded-md"
-};
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" help ");
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_BasicAuthenticationInput = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BasicAuthenticationInput");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BasicAuthenticationInput, {
-    modelValue: _ctx.formFields.email,
-    "onUpdate:modelValue": _cache[0] || (_cache[0] = function ($event) {
-      return _ctx.formFields.email = $event;
-    }),
-    name: "Email",
-    type: "email",
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(_ctx.allErrors == 401 ? 'border-red-600' : ''),
-    objKey: "email"
-  }, null, 8
-  /* PROPS */
-  , ["modelValue", "class"]), _hoisted_3])]);
+  return " HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP ";
 }
 
 /***/ }),
@@ -31261,24 +31411,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 /* harmony import */ var _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../store/modules/StudentEntries */ "./resources/js/store/modules/StudentEntries.js");
 /* harmony import */ var _views_Home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../views/Home.vue */ "./resources/js/views/Home.vue");
-/* harmony import */ var _views_EntryViews_someShit_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/EntryViews/someShit.vue */ "./resources/js/views/EntryViews/someShit.vue");
-/* harmony import */ var _views_EntryViews_ListUsers_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/EntryViews/ListUsers.vue */ "./resources/js/views/EntryViews/ListUsers.vue");
-/* harmony import */ var _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/Dashboard.vue */ "./resources/js/views/Dashboard.vue");
-/* harmony import */ var _views_Register_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Register.vue */ "./resources/js/views/Register.vue");
-/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/Login.vue */ "./resources/js/views/Login.vue");
-/* harmony import */ var _views_CreateForms_CreateEntry_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/CreateForms/CreateEntry.vue */ "./resources/js/views/CreateForms/CreateEntry.vue");
-/* harmony import */ var _views_CreateForms_FamilyDataEntry_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../views/CreateForms/FamilyDataEntry.vue */ "./resources/js/views/CreateForms/FamilyDataEntry.vue");
-/* harmony import */ var _views_CreateForms_AcademicsDataEntry_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../views/CreateForms/AcademicsDataEntry.vue */ "./resources/js/views/CreateForms/AcademicsDataEntry.vue");
-/* harmony import */ var _views_EntryViews_StudentEntry_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../views/EntryViews/StudentEntry.vue */ "./resources/js/views/EntryViews/StudentEntry.vue");
-/* harmony import */ var _views_CreateForms_CreateCourse_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../views/CreateForms/CreateCourse.vue */ "./resources/js/views/CreateForms/CreateCourse.vue");
-/* harmony import */ var _views_EntryViews_AllCourseEntries_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../views/EntryViews/AllCourseEntries.vue */ "./resources/js/views/EntryViews/AllCourseEntries.vue");
-/* harmony import */ var _views_EntryViews_SingleCourse_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../views/EntryViews/SingleCourse.vue */ "./resources/js/views/EntryViews/SingleCourse.vue");
-/* harmony import */ var _views_EditForms_EditCourse_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../views/EditForms/EditCourse.vue */ "./resources/js/views/EditForms/EditCourse.vue");
-/* harmony import */ var _views_EditForms_EditStudent_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../views/EditForms/EditStudent.vue */ "./resources/js/views/EditForms/EditStudent.vue");
-/* harmony import */ var _views_EditForms_EditStudentFamily_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../views/EditForms/EditStudentFamily.vue */ "./resources/js/views/EditForms/EditStudentFamily.vue");
-/* harmony import */ var _views_EditForms_EditStudentAcademics_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../views/EditForms/EditStudentAcademics.vue */ "./resources/js/views/EditForms/EditStudentAcademics.vue");
-/* harmony import */ var _views_EntryViews_AllUsers_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../views/EntryViews/AllUsers.vue */ "./resources/js/views/EntryViews/AllUsers.vue");
-/* harmony import */ var _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../views/PasswordRecovery.vue */ "./resources/js/views/PasswordRecovery.vue");
+/* harmony import */ var _views_GetPassword_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/GetPassword.vue */ "./resources/js/views/GetPassword.vue");
+/* harmony import */ var _views_EntryViews_someShit_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/EntryViews/someShit.vue */ "./resources/js/views/EntryViews/someShit.vue");
+/* harmony import */ var _views_EntryViews_ListUsers_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/EntryViews/ListUsers.vue */ "./resources/js/views/EntryViews/ListUsers.vue");
+/* harmony import */ var _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../views/Dashboard.vue */ "./resources/js/views/Dashboard.vue");
+/* harmony import */ var _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../views/PasswordRecovery.vue */ "./resources/js/views/PasswordRecovery.vue");
+/* harmony import */ var _views_Register_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../views/Register.vue */ "./resources/js/views/Register.vue");
+/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../views/Login.vue */ "./resources/js/views/Login.vue");
+/* harmony import */ var _views_CreateForms_CreateEntry_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../views/CreateForms/CreateEntry.vue */ "./resources/js/views/CreateForms/CreateEntry.vue");
+/* harmony import */ var _views_CreateForms_FamilyDataEntry_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../views/CreateForms/FamilyDataEntry.vue */ "./resources/js/views/CreateForms/FamilyDataEntry.vue");
+/* harmony import */ var _views_CreateForms_AcademicsDataEntry_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../views/CreateForms/AcademicsDataEntry.vue */ "./resources/js/views/CreateForms/AcademicsDataEntry.vue");
+/* harmony import */ var _views_EntryViews_StudentEntry_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../views/EntryViews/StudentEntry.vue */ "./resources/js/views/EntryViews/StudentEntry.vue");
+/* harmony import */ var _views_CreateForms_CreateCourse_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../views/CreateForms/CreateCourse.vue */ "./resources/js/views/CreateForms/CreateCourse.vue");
+/* harmony import */ var _views_EntryViews_AllCourseEntries_vue__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../views/EntryViews/AllCourseEntries.vue */ "./resources/js/views/EntryViews/AllCourseEntries.vue");
+/* harmony import */ var _views_EntryViews_SingleCourse_vue__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../views/EntryViews/SingleCourse.vue */ "./resources/js/views/EntryViews/SingleCourse.vue");
+/* harmony import */ var _views_EditForms_EditCourse_vue__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../views/EditForms/EditCourse.vue */ "./resources/js/views/EditForms/EditCourse.vue");
+/* harmony import */ var _views_EditForms_EditStudent_vue__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../views/EditForms/EditStudent.vue */ "./resources/js/views/EditForms/EditStudent.vue");
+/* harmony import */ var _views_EditForms_EditStudentFamily_vue__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../views/EditForms/EditStudentFamily.vue */ "./resources/js/views/EditForms/EditStudentFamily.vue");
+/* harmony import */ var _views_EditForms_EditStudentAcademics_vue__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../views/EditForms/EditStudentAcademics.vue */ "./resources/js/views/EditForms/EditStudentAcademics.vue");
 /* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
@@ -31308,19 +31458,23 @@ var routes = [{
 }, {
   path: '/list-users',
   name: 'ListUsers',
-  component: _views_EntryViews_ListUsers_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+  component: _views_EntryViews_ListUsers_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+}, {
+  path: '/forgot-password',
+  name: 'GetPassword',
+  component: _views_GetPassword_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
 }, {
   path: '/someshit',
   name: 'SomeShit',
-  component: _views_EntryViews_someShit_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  component: _views_EntryViews_someShit_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
 }, {
   path: '/students',
   name: 'Dashboard',
-  component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  component: _views_Dashboard_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
 }, {
   path: '/login',
   name: 'Login',
-  component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+  component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
   beforeEnter: function beforeEnter(to, from) {
     if (from.name === 'Register') {
       to.meta.transitionName = 'LoginRegister';
@@ -31331,7 +31485,7 @@ var routes = [{
 }, {
   path: '/register',
   name: 'Register',
-  component: _views_Register_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+  component: _views_Register_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
   beforeEnter: function beforeEnter(to, from, next) {
     if (from.name === 'Login') {
       to.meta.transitionName = 'LoginRegister';
@@ -31344,68 +31498,64 @@ var routes = [{
 }, {
   path: '/students/create',
   name: 'CreateEntry',
-  component: _views_CreateForms_CreateEntry_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  component: _views_CreateForms_CreateEntry_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
 }, {
   path: '/students/:student_id/family/create',
   name: 'FamilyDataEntry',
-  component: _views_CreateForms_FamilyDataEntry_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+  component: _views_CreateForms_FamilyDataEntry_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
 }, {
   path: '/students/:student_id/academics/create',
   name: 'AcademicsDataEntry',
-  component: _views_CreateForms_AcademicsDataEntry_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+  component: _views_CreateForms_AcademicsDataEntry_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
 }, {
   path: '/students/:student_id',
   name: 'StudentEntry',
-  component: _views_EntryViews_StudentEntry_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  component: _views_EntryViews_StudentEntry_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
 }, {
   path: '/students/:student_id/edit',
   name: 'EditStudent',
-  component: _views_EditForms_EditStudent_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
+  component: _views_EditForms_EditStudent_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
 }, {
   path: '/students/:student_id/family/edit',
   name: 'EditStudentFamily',
-  component: _views_EditForms_EditStudentFamily_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
+  component: _views_EditForms_EditStudentFamily_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
 }, {
   path: '/students/:student_id/academics/edit',
   name: 'EditStudentAcademics',
-  component: _views_EditForms_EditStudentAcademics_vue__WEBPACK_IMPORTED_MODULE_17__["default"]
+  component: _views_EditForms_EditStudentAcademics_vue__WEBPACK_IMPORTED_MODULE_19__["default"]
 }, {
   path: '/courses/create',
   name: 'CreateCourse',
-  component: _views_CreateForms_CreateCourse_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+  component: _views_CreateForms_CreateCourse_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
 }, {
   path: '/courses',
   name: 'AllCourseEntries',
-  component: _views_EntryViews_AllCourseEntries_vue__WEBPACK_IMPORTED_MODULE_12__["default"]
+  component: _views_EntryViews_AllCourseEntries_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
 }, {
   path: '/courses/:course_id',
   name: 'SingleCourse',
-  component: _views_EntryViews_SingleCourse_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+  component: _views_EntryViews_SingleCourse_vue__WEBPACK_IMPORTED_MODULE_15__["default"]
 }, {
   path: '/courses/:course_id/edit',
   name: 'EditCourse',
-  component: _views_EditForms_EditCourse_vue__WEBPACK_IMPORTED_MODULE_14__["default"]
-}, {
-  path: '/all-users',
-  name: 'AllUsers',
-  conponent: _views_EntryViews_AllUsers_vue__WEBPACK_IMPORTED_MODULE_18__["default"]
+  component: _views_EditForms_EditCourse_vue__WEBPACK_IMPORTED_MODULE_16__["default"]
 }, {
   path: '/password-recovery',
   name: 'PasswordRecovery',
-  component: _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_19__["default"]
+  component: _views_PasswordRecovery_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_20__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_20__.createWebHistory)(process.env.APP_URL),
   routes: routes
 });
 router.beforeEach(function (to, from, next) {
-  if ((to.name === 'Login' || to.name === 'Register') && !_store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
+  if ((to.name === 'Login' || to.name === 'Register' || to.name === 'GetPassword') && !_store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
     next();
-  } else if ((to.name === 'Login' || to.name === 'Register') && _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
+  } else if ((to.name === 'Login' || to.name === 'Register' || to.name === 'GetPassword') && _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
     next({
       path: "".concat(sessionStorage.getItem('PREVIOUS-ROUTE-NAME'))
     }); // next({name: 'Dashboard'})
-  } else if (to.name !== 'Login' && to.name !== 'Register' && _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
+  } else if (to.name !== 'Login' && to.name !== 'Register' && to.name !== 'GetPassword' && _store_modules_StudentEntries__WEBPACK_IMPORTED_MODULE_0__["default"].state.authToken) {
     next();
   }
 });
@@ -31874,16 +32024,44 @@ var actions = {
       }, _callee7);
     }))();
   },
-  getFamilyCreatePage: function getFamilyCreatePage(_ref15, id) {
+  forgotPasswordForm: function forgotPasswordForm(_ref15, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee8() {
-      var commit;
+      var commit, errors;
       return _regeneratorRuntime().wrap(function _callee8$(_context8) {
         while (1) {
           switch (_context8.prev = _context8.next) {
             case 0:
               commit = _ref15.commit;
               commit('newLoadingStatus', true);
-              _context8.next = 4;
+              errors = {};
+              _context8.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/forgot-password', formFields).then(function (response) {
+                console.log(response);
+              })["catch"](function (error) {
+                console.log(error);
+              });
+
+            case 5:
+              commit('newLoadingStatus', false);
+
+            case 6:
+            case "end":
+              return _context8.stop();
+          }
+        }
+      }, _callee8);
+    }))();
+  },
+  getFamilyCreatePage: function getFamilyCreatePage(_ref16, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+      var commit;
+      return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+        while (1) {
+          switch (_context9.prev = _context9.next) {
+            case 0:
+              commit = _ref16.commit;
+              commit('newLoadingStatus', true);
+              _context9.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/students/".concat(id, "/family/create")).then(function (response) {
                 if (response.data.canProceed) {
                   _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
@@ -31922,23 +32100,23 @@ var actions = {
 
             case 5:
             case "end":
-              return _context8.stop();
+              return _context9.stop();
           }
         }
-      }, _callee8);
+      }, _callee9);
     }))();
   },
-  getAcademicsCreatePage: function getAcademicsCreatePage(_ref16, id) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee9() {
+  getAcademicsCreatePage: function getAcademicsCreatePage(_ref17, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
       var commit;
-      return _regeneratorRuntime().wrap(function _callee9$(_context9) {
+      return _regeneratorRuntime().wrap(function _callee10$(_context10) {
         while (1) {
-          switch (_context9.prev = _context9.next) {
+          switch (_context10.prev = _context10.next) {
             case 0:
-              commit = _ref16.commit;
+              commit = _ref17.commit;
               commit('newLoadingStatus', true);
               commit('setFlashMessage', '');
-              _context9.next = 5;
+              _context10.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/students/".concat(id, "/academics/create")).then(function (response) {
                 if (response.data.canProceed) {
                   _router__WEBPACK_IMPORTED_MODULE_2__["default"].push({
@@ -31979,23 +32157,23 @@ var actions = {
 
             case 6:
             case "end":
-              return _context9.stop();
+              return _context10.stop();
           }
         }
-      }, _callee9);
+      }, _callee10);
     }))();
   },
-  getAllEntries: function getAllEntries(_ref17) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee10() {
+  getAllEntries: function getAllEntries(_ref18) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
       var commit, todayDate;
-      return _regeneratorRuntime().wrap(function _callee10$(_context10) {
+      return _regeneratorRuntime().wrap(function _callee11$(_context11) {
         while (1) {
-          switch (_context10.prev = _context10.next) {
+          switch (_context11.prev = _context11.next) {
             case 0:
-              commit = _ref17.commit;
+              commit = _ref18.commit;
               todayDate = new Date();
               commit('newLoadingStatus', true);
-              _context10.next = 5;
+              _context11.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api').then(function (response) {
                 response.data.forEach(function (entry) {
                   var birthDate = new Date(entry.dob);
@@ -32030,23 +32208,23 @@ var actions = {
 
             case 6:
             case "end":
-              return _context10.stop();
+              return _context11.stop();
           }
         }
-      }, _callee10);
+      }, _callee11);
     }))();
   },
-  getSingleEntry: function getSingleEntry(_ref18, id) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee11() {
+  getSingleEntry: function getSingleEntry(_ref19, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
       var commit, todayDate;
-      return _regeneratorRuntime().wrap(function _callee11$(_context11) {
+      return _regeneratorRuntime().wrap(function _callee12$(_context12) {
         while (1) {
-          switch (_context11.prev = _context11.next) {
+          switch (_context12.prev = _context12.next) {
             case 0:
-              commit = _ref18.commit;
+              commit = _ref19.commit;
               todayDate = new Date();
               commit('newLoadingStatus', true);
-              _context11.next = 5;
+              _context12.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/students/".concat(id)).then(function (response) {
                 if (response.data) {
                   var birthDate = new Date(response.data.student.dob);
@@ -32084,49 +32262,13 @@ var actions = {
 
             case 6:
             case "end":
-              return _context11.stop();
-          }
-        }
-      }, _callee11);
-    }))();
-  },
-  addEntryStudent: function addEntryStudent(_ref19, formFields) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee12() {
-      var commit, errors;
-      return _regeneratorRuntime().wrap(function _callee12$(_context12) {
-        while (1) {
-          switch (_context12.prev = _context12.next) {
-            case 0:
-              commit = _ref19.commit;
-              errors = {};
-              commit('newLoadingStatus', true);
-              _context12.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students', formFields).then(function (response) {
-                commit('newEntries', response.data);
-                commit('newErrors', errors);
-                commit('emptyResponse', false);
-              })["catch"](function (error) {
-                if (error.response.status == 422) {
-                  for (var key in error.response.data.errors) {
-                    errors[key] = error.response.data.errors[key][0];
-                  }
-
-                  commit('newErrors', errors);
-                }
-              });
-
-            case 5:
-              commit('newLoadingStatus', false);
-
-            case 6:
-            case "end":
               return _context12.stop();
           }
         }
       }, _callee12);
     }))();
   },
-  addEntryFamily: function addEntryFamily(_ref20, formFields) {
+  addEntryStudent: function addEntryStudent(_ref20, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee13() {
       var commit, errors;
       return _regeneratorRuntime().wrap(function _callee13$(_context13) {
@@ -32137,9 +32279,10 @@ var actions = {
               errors = {};
               commit('newLoadingStatus', true);
               _context13.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students/family', formFields).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students', formFields).then(function (response) {
                 commit('newEntries', response.data);
                 commit('newErrors', errors);
+                commit('emptyResponse', false);
               })["catch"](function (error) {
                 if (error.response.status == 422) {
                   for (var key in error.response.data.errors) {
@@ -32161,7 +32304,7 @@ var actions = {
       }, _callee13);
     }))();
   },
-  addEntryAcademics: function addEntryAcademics(_ref21, formFields) {
+  addEntryFamily: function addEntryFamily(_ref21, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee14() {
       var commit, errors;
       return _regeneratorRuntime().wrap(function _callee14$(_context14) {
@@ -32172,7 +32315,7 @@ var actions = {
               errors = {};
               commit('newLoadingStatus', true);
               _context14.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students/academics', formFields).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students/family', formFields).then(function (response) {
                 commit('newEntries', response.data);
                 commit('newErrors', errors);
               })["catch"](function (error) {
@@ -32196,7 +32339,7 @@ var actions = {
       }, _callee14);
     }))();
   },
-  editStudentEntry: function editStudentEntry(_ref22, payload) {
+  addEntryAcademics: function addEntryAcademics(_ref22, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee15() {
       var commit, errors;
       return _regeneratorRuntime().wrap(function _callee15$(_context15) {
@@ -32207,6 +32350,41 @@ var actions = {
               errors = {};
               commit('newLoadingStatus', true);
               _context15.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/students/academics', formFields).then(function (response) {
+                commit('newEntries', response.data);
+                commit('newErrors', errors);
+              })["catch"](function (error) {
+                if (error.response.status == 422) {
+                  for (var key in error.response.data.errors) {
+                    errors[key] = error.response.data.errors[key][0];
+                  }
+
+                  commit('newErrors', errors);
+                }
+              });
+
+            case 5:
+              commit('newLoadingStatus', false);
+
+            case 6:
+            case "end":
+              return _context15.stop();
+          }
+        }
+      }, _callee15);
+    }))();
+  },
+  editStudentEntry: function editStudentEntry(_ref23, payload) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
+      var commit, errors;
+      return _regeneratorRuntime().wrap(function _callee16$(_context16) {
+        while (1) {
+          switch (_context16.prev = _context16.next) {
+            case 0:
+              commit = _ref23.commit;
+              errors = {};
+              commit('newLoadingStatus', true);
+              _context16.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().put("/api/students/".concat(payload.id), payload.formFields).then(function (response) {
                 if (response.status == 200) {
                   commit('setFlashMessage', response.data.message);
@@ -32227,23 +32405,23 @@ var actions = {
 
             case 5:
             case "end":
-              return _context15.stop();
+              return _context16.stop();
           }
         }
-      }, _callee15);
+      }, _callee16);
     }))();
   },
-  editStudentFamilyEntry: function editStudentFamilyEntry(_ref23, formFields) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee16() {
+  editStudentFamilyEntry: function editStudentFamilyEntry(_ref24, formFields) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17() {
       var commit, errors;
-      return _regeneratorRuntime().wrap(function _callee16$(_context16) {
+      return _regeneratorRuntime().wrap(function _callee17$(_context17) {
         while (1) {
-          switch (_context16.prev = _context16.next) {
+          switch (_context17.prev = _context17.next) {
             case 0:
-              commit = _ref23.commit;
+              commit = _ref24.commit;
               errors = {};
               commit('newLoadingStatus', true);
-              _context16.next = 5;
+              _context17.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().put("/api/students/".concat(formFields.student_id, "/family"), formFields).then(function (response) {
                 if (response.status == 200) {
                   console.log(response);
@@ -32266,23 +32444,23 @@ var actions = {
 
             case 6:
             case "end":
-              return _context16.stop();
+              return _context17.stop();
           }
         }
-      }, _callee16);
+      }, _callee17);
     }))();
   },
-  editStudentAcademics: function editStudentAcademics(_ref24, formFields) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee17() {
+  editStudentAcademics: function editStudentAcademics(_ref25, formFields) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18() {
       var commit, errors;
-      return _regeneratorRuntime().wrap(function _callee17$(_context17) {
+      return _regeneratorRuntime().wrap(function _callee18$(_context18) {
         while (1) {
-          switch (_context17.prev = _context17.next) {
+          switch (_context18.prev = _context18.next) {
             case 0:
-              commit = _ref24.commit;
+              commit = _ref25.commit;
               errors = {};
               commit('newLoadingStatus', true);
-              _context17.next = 5;
+              _context18.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().put("/api/students/academics/".concat(formFields.academic_id), formFields).then(function (response) {
                 if (response.status == 200) {
                   commit('setFlashMessage', response.data.message);
@@ -32300,21 +32478,21 @@ var actions = {
 
             case 6:
             case "end":
-              return _context17.stop();
+              return _context18.stop();
           }
         }
-      }, _callee17);
+      }, _callee18);
     }))();
   },
-  deleteSigleStudent: function deleteSigleStudent(_ref25, id) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee18() {
+  deleteSigleStudent: function deleteSigleStudent(_ref26, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19() {
       var commit;
-      return _regeneratorRuntime().wrap(function _callee18$(_context18) {
+      return _regeneratorRuntime().wrap(function _callee19$(_context19) {
         while (1) {
-          switch (_context18.prev = _context18.next) {
+          switch (_context19.prev = _context19.next) {
             case 0:
-              commit = _ref25.commit;
-              _context18.next = 3;
+              commit = _ref26.commit;
+              _context19.next = 3;
               return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]("/api/students/".concat(id)).then(function (response) {
                 if (response.status == 200) {
                   commit('setFlashMessage', response.data.message);
@@ -32328,49 +32506,13 @@ var actions = {
 
             case 3:
             case "end":
-              return _context18.stop();
-          }
-        }
-      }, _callee18);
-    }))();
-  },
-  addEntryCourse: function addEntryCourse(_ref26, formFields) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee19() {
-      var commit, errors;
-      return _regeneratorRuntime().wrap(function _callee19$(_context19) {
-        while (1) {
-          switch (_context19.prev = _context19.next) {
-            case 0:
-              commit = _ref26.commit;
-              errors = {};
-              commit('newLoadingStatus', true);
-              _context19.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/courses', formFields).then(function (response) {
-                commit('newCourses', response.data);
-                commit('newErrors', errors);
-                commit('emptyResponse', false);
-              })["catch"](function (error) {
-                if (error.response.status == 422) {
-                  for (var key in error.response.data.errors) {
-                    errors[key] = error.response.data.errors[key][0];
-                  }
-
-                  commit('newErrors', errors);
-                }
-              });
-
-            case 5:
-              commit('newLoadingStatus', false);
-
-            case 6:
-            case "end":
               return _context19.stop();
           }
         }
       }, _callee19);
     }))();
   },
-  addCourseMarks: function addCourseMarks(_ref27, formFields) {
+  addEntryCourse: function addEntryCourse(_ref27, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee20() {
       var commit, errors;
       return _regeneratorRuntime().wrap(function _callee20$(_context20) {
@@ -32381,9 +32523,10 @@ var actions = {
               errors = {};
               commit('newLoadingStatus', true);
               _context20.next = 5;
-              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/courses-marks', formFields).then(function (response) {
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/courses', formFields).then(function (response) {
                 commit('newCourses', response.data);
                 commit('newErrors', errors);
+                commit('emptyResponse', false);
               })["catch"](function (error) {
                 if (error.response.status == 422) {
                   for (var key in error.response.data.errors) {
@@ -32405,16 +32548,51 @@ var actions = {
       }, _callee20);
     }))();
   },
-  getAllCourses: function getAllCourses(_ref28) {
+  addCourseMarks: function addCourseMarks(_ref28, formFields) {
     return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee21() {
-      var commit;
+      var commit, errors;
       return _regeneratorRuntime().wrap(function _callee21$(_context21) {
         while (1) {
           switch (_context21.prev = _context21.next) {
             case 0:
               commit = _ref28.commit;
+              errors = {};
               commit('newLoadingStatus', true);
-              _context21.next = 4;
+              _context21.next = 5;
+              return axios__WEBPACK_IMPORTED_MODULE_0___default().post('/api/courses-marks', formFields).then(function (response) {
+                commit('newCourses', response.data);
+                commit('newErrors', errors);
+              })["catch"](function (error) {
+                if (error.response.status == 422) {
+                  for (var key in error.response.data.errors) {
+                    errors[key] = error.response.data.errors[key][0];
+                  }
+
+                  commit('newErrors', errors);
+                }
+              });
+
+            case 5:
+              commit('newLoadingStatus', false);
+
+            case 6:
+            case "end":
+              return _context21.stop();
+          }
+        }
+      }, _callee21);
+    }))();
+  },
+  getAllCourses: function getAllCourses(_ref29) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22() {
+      var commit;
+      return _regeneratorRuntime().wrap(function _callee22$(_context22) {
+        while (1) {
+          switch (_context22.prev = _context22.next) {
+            case 0:
+              commit = _ref29.commit;
+              commit('newLoadingStatus', true);
+              _context22.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get('/api/courses').then(function (response) {
                 commit('newCourses', response.data);
 
@@ -32430,22 +32608,22 @@ var actions = {
 
             case 5:
             case "end":
-              return _context21.stop();
+              return _context22.stop();
           }
         }
-      }, _callee21);
+      }, _callee22);
     }))();
   },
-  getSingleCourse: function getSingleCourse(_ref29, id) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee22() {
+  getSingleCourse: function getSingleCourse(_ref30, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23() {
       var commit;
-      return _regeneratorRuntime().wrap(function _callee22$(_context22) {
+      return _regeneratorRuntime().wrap(function _callee23$(_context23) {
         while (1) {
-          switch (_context22.prev = _context22.next) {
+          switch (_context23.prev = _context23.next) {
             case 0:
-              commit = _ref29.commit;
+              commit = _ref30.commit;
               commit('newLoadingStatus', true);
-              _context22.next = 4;
+              _context23.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().get("/api/courses/".concat(id)).then(function (response) {
                 if (response.data.canProceed) {
                   commit('newSingleCourse', response.data.course);
@@ -32464,23 +32642,23 @@ var actions = {
 
             case 5:
             case "end":
-              return _context22.stop();
+              return _context23.stop();
           }
         }
-      }, _callee22);
+      }, _callee23);
     }))();
   },
-  editSingleCourse: function editSingleCourse(_ref30, payload) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee23() {
+  editSingleCourse: function editSingleCourse(_ref31, payload) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24() {
       var commit, errors;
-      return _regeneratorRuntime().wrap(function _callee23$(_context23) {
+      return _regeneratorRuntime().wrap(function _callee24$(_context24) {
         while (1) {
-          switch (_context23.prev = _context23.next) {
+          switch (_context24.prev = _context24.next) {
             case 0:
-              commit = _ref30.commit;
+              commit = _ref31.commit;
               errors = {};
               commit('newLoadingStatus', true);
-              _context23.next = 5;
+              _context24.next = 5;
               return axios__WEBPACK_IMPORTED_MODULE_0___default().put("/api/courses/".concat(payload.id), payload.formFields).then(function (response) {
                 console.log(response);
                 commit('newSingleCourse', payload.formFields);
@@ -32500,22 +32678,22 @@ var actions = {
 
             case 6:
             case "end":
-              return _context23.stop();
+              return _context24.stop();
           }
         }
-      }, _callee23);
+      }, _callee24);
     }))();
   },
-  deleteSingleCourse: function deleteSingleCourse(_ref31, id) {
-    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee24() {
+  deleteSingleCourse: function deleteSingleCourse(_ref32, id) {
+    return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee25() {
       var commit;
-      return _regeneratorRuntime().wrap(function _callee24$(_context24) {
+      return _regeneratorRuntime().wrap(function _callee25$(_context25) {
         while (1) {
-          switch (_context24.prev = _context24.next) {
+          switch (_context25.prev = _context25.next) {
             case 0:
-              commit = _ref31.commit;
+              commit = _ref32.commit;
               commit('newLoadingStatus', true);
-              _context24.next = 4;
+              _context25.next = 4;
               return axios__WEBPACK_IMPORTED_MODULE_0___default()["delete"]("/api/courses/".concat(id)).then(function (response) {
                 console.log(response);
 
@@ -32536,10 +32714,10 @@ var actions = {
 
             case 5:
             case "end":
-              return _context24.stop();
+              return _context25.stop();
           }
         }
-      }, _callee24);
+      }, _callee25);
     }))();
   }
 };
@@ -58743,34 +58921,6 @@ if (false) {}
 
 /***/ }),
 
-/***/ "./resources/js/views/EntryViews/AllUsers.vue":
-/*!****************************************************!*\
-  !*** ./resources/js/views/EntryViews/AllUsers.vue ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _AllUsers_vue_vue_type_template_id_3c4cc64b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AllUsers.vue?vue&type=template&id=3c4cc64b */ "./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b");
-/* harmony import */ var _AllUsers_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AllUsers.vue?vue&type=script&lang=js */ "./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js");
-/* harmony import */ var C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
-
-
-
-
-;
-const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AllUsers_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AllUsers_vue_vue_type_template_id_3c4cc64b__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/EntryViews/AllUsers.vue"]])
-/* hot reload */
-if (false) {}
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
-
-/***/ }),
-
 /***/ "./resources/js/views/EntryViews/ListUsers.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/views/EntryViews/ListUsers.vue ***!
@@ -58881,6 +59031,34 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_someShit_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_someShit_vue_vue_type_template_id_477d1c18__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/EntryViews/someShit.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/views/GetPassword.vue":
+/*!********************************************!*\
+  !*** ./resources/js/views/GetPassword.vue ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _GetPassword_vue_vue_type_template_id_1ff4a742__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./GetPassword.vue?vue&type=template&id=1ff4a742 */ "./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742");
+/* harmony import */ var _GetPassword_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GetPassword.vue?vue&type=script&lang=js */ "./resources/js/views/GetPassword.vue?vue&type=script&lang=js");
+/* harmony import */ var C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,C_xampp_htdocs_SIMS_app_prototype_tail_vue_clean_v6_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_GetPassword_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_GetPassword_vue_vue_type_template_id_1ff4a742__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/views/GetPassword.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -59634,22 +59812,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js":
-/*!****************************************************************************!*\
-  !*** ./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js ***!
-  \****************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AllUsers_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AllUsers_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AllUsers.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=script&lang=js");
- 
-
-/***/ }),
-
 /***/ "./resources/js/views/EntryViews/ListUsers.vue?vue&type=script&lang=js":
 /*!*****************************************************************************!*\
   !*** ./resources/js/views/EntryViews/ListUsers.vue?vue&type=script&lang=js ***!
@@ -59710,6 +59872,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_someShit_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_someShit_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./someShit.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/someShit.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/views/GetPassword.vue?vue&type=script&lang=js":
+/*!********************************************************************!*\
+  !*** ./resources/js/views/GetPassword.vue?vue&type=script&lang=js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_GetPassword_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_GetPassword_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./GetPassword.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -60402,22 +60580,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b ***!
-  \**********************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AllUsers_vue_vue_type_template_id_3c4cc64b__WEBPACK_IMPORTED_MODULE_0__.render)
-/* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_AllUsers_vue_vue_type_template_id_3c4cc64b__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./AllUsers.vue?vue&type=template&id=3c4cc64b */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/AllUsers.vue?vue&type=template&id=3c4cc64b");
-
-
-/***/ }),
-
 /***/ "./resources/js/views/EntryViews/ListUsers.vue?vue&type=template&id=84e1ae54":
 /*!***********************************************************************************!*\
   !*** ./resources/js/views/EntryViews/ListUsers.vue?vue&type=template&id=84e1ae54 ***!
@@ -60478,6 +60640,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_someShit_vue_vue_type_template_id_477d1c18__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_someShit_vue_vue_type_template_id_477d1c18__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./someShit.vue?vue&type=template&id=477d1c18 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/EntryViews/someShit.vue?vue&type=template&id=477d1c18");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742":
+/*!**************************************************************************!*\
+  !*** ./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742 ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_GetPassword_vue_vue_type_template_id_1ff4a742__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_GetPassword_vue_vue_type_template_id_1ff4a742__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./GetPassword.vue?vue&type=template&id=1ff4a742 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/views/GetPassword.vue?vue&type=template&id=1ff4a742");
 
 
 /***/ }),

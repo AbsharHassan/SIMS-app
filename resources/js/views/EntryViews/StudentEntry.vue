@@ -30,11 +30,11 @@
                                 </div>
                             </router-link>
                         </div>
-                        <BasicInfo :singleStudent="singleStudent" :singleFamily="singleFamily"/>
-                        <EducationHistory :singleStudent="singleStudent"/>
-                        <GPASection :singleAcademics="singleAcademics" :currentSem="singleStudent.current_sem" :reasons="singleStudent.reason" @revealSemesterInfo="revealSemesterInfo($event)" @loadingOpacityModifier="loadingOpacityModifier()"/>
+                        <BasicInfo :singleStudent="singleStudent" :singleFamily="singleFamily" :key="BasicInfoKey"/>
+                        <EducationHistory :singleStudent="singleStudent" :key="EducationHistoryKey"/>
+                        <GPASection :singleAcademics="singleAcademics" :currentSem="singleStudent.current_sem" :reasons="singleStudent.reason" @revealSemesterInfo="revealSemesterInfo($event)" @loadingOpacityModifier="loadingOpacityModifier()" :key="GPASectionKey"/>
                         <transition name="detailSection" appear>
-                            <SemesterDetails v-if="showSemDetails" @closeSemDetails="closeSemDetails()" :academicsData="singleAcademics[`${this.academicsIndex - 1}`]"/>
+                            <SemesterDetails v-if="showSemDetails" @closeSemDetails="closeSemDetails()" :academicsData="singleAcademics[`${this.academicsIndex - 1}`]" :key="SemesterDetailsKey"/>
                         </transition> 
                     </div>
                 </div>
@@ -72,6 +72,10 @@ export default {
             loadingOpacity: null,
             academicsIndex: null,
             showSemDetails: false,
+            BasicInfoKey: 0,
+            EducationHistoryKey: 0,
+            GPASectionKey: 0,
+            SemesterDetailsKey: 0,
         }
     },
     methods: {
@@ -97,9 +101,17 @@ export default {
     computed: {
         ...mapGetters(['singleStudent', 'singleFamily', 'singleAcademics', 'loadingStatus', 'navWidth'])
     },
-    created() {
+    async created() {
         this.loadingOpacity = 1
-        this.getSingleEntry(this.$route.params.student_id);
+        await this.getSingleEntry(this.$route.params.student_id);
+        this.BasicInfoKey++
+        console.log(this.BasicInfoKey)
+        this.EducationHistoryKey++
+        console.log(this.EducationHistoryKey)
+        this.GPASectionKey++ 
+        console.log(this.GPASectionKey)
+        this.SemesterDetailsKey++
+        console.log(this.SemesterDetailsKey)
     },
 }
 </script>

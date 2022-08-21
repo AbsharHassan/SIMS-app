@@ -231,6 +231,17 @@ const actions = {
         })
         commit('newLoadingStatus', false)
     },
+    async forgotPasswordForm({ commit }, formFields) {
+        commit('newLoadingStatus', true)
+        var errors = {}
+        await axios.post('/api/forgot-password', formFields)
+        .then(response => {
+            console.log(response)
+        }).catch(error => {
+            console.log(error)
+        })
+        commit('newLoadingStatus', false)
+    },
     async getFamilyCreatePage({ commit }, id) {
         commit('newLoadingStatus', true)
         await axios.get(`/api/students/${id}/family/create`)

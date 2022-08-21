@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <a href="#" class="text-sm text-sky-600 hover:text-sky-700 hover:underline mb-6">Forgot your password?</a>
+                                        <router-link :to="{name: 'GetPassword'}" class="text-sm text-sky-600 hover:text-sky-700 hover:underline mb-6">Forgot your password?</router-link>
                                     </div>
                                 </div>
                             </div>

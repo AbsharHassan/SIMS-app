@@ -2,9 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router';
 import store from '../store/modules/StudentEntries'
 
 import Home from '../views/Home.vue'
+import GetPassword from '../views/GetPassword.vue'
 import someShit from '../views/EntryViews/someShit.vue'
 import ListUsers from '../views/EntryViews/ListUsers.vue'
 import Dashboard from '../views/Dashboard.vue'
+import PasswordRecovery from '../views/PasswordRecovery.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import CreateEntry from '../views/CreateForms/CreateEntry.vue'
@@ -18,8 +20,6 @@ import EditCourse from '../views/EditForms/EditCourse.vue'
 import EditStudent from '../views/EditForms/EditStudent.vue'
 import EditStudentFamily from '../views/EditForms/EditStudentFamily.vue'
 import EditStudentAcademics from '../views/EditForms/EditStudentAcademics.vue'
-import AllUsers from '../views/EntryViews/AllUsers.vue'
-import PasswordRecovery from '../views/PasswordRecovery.vue'
 
 
 const routes = [
@@ -32,6 +32,11 @@ const routes = [
         path: '/list-users',
         name: 'ListUsers',
         component: ListUsers
+    },
+    {
+        path: '/forgot-password',
+        name: 'GetPassword',
+        component: GetPassword
     },
     {
         path: '/someshit',
@@ -125,11 +130,6 @@ const routes = [
         component: EditCourse
     },
     {
-        path: '/all-users',
-        name: 'AllUsers',
-        conponent: AllUsers
-    },
-    {
         path: '/password-recovery',
         name: 'PasswordRecovery',
         component: PasswordRecovery
@@ -142,12 +142,12 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if(((to.name === 'Login') || (to.name === 'Register')) && (!store.state.authToken)) {
+    if(((to.name === 'Login') || (to.name === 'Register') || (to.name === 'GetPassword')) && (!store.state.authToken)) {
         next()
-    } else if(((to.name === 'Login') || (to.name === 'Register')) && (store.state.authToken)) {
+    } else if(((to.name === 'Login') || (to.name === 'Register') || (to.name === 'GetPassword')) && (store.state.authToken)) {
         next({path: `${sessionStorage.getItem('PREVIOUS-ROUTE-NAME')}`})
         // next({name: 'Dashboard'})
-    } else if((to.name !== 'Login' && to.name !== 'Register' && store.state.authToken)) {
+    } else if((to.name !== 'Login' && to.name !== 'Register' && to.name !== 'GetPassword' && store.state.authToken)) {
         next()
     }
   })

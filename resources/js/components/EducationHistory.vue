@@ -4,10 +4,10 @@
         <div class="grad3 w-[300px]"></div>
         <div class="h-full sm:flex justify-between py-6 pr-0 lg:pr-6">
             <div class="h-full sm:basis-1/2">
-                <BasicEntry title="HSSC (FSC)" :value="singleStudent.fsc_marks*100 + '%'" :underlineControl="width > '768' ? false : true" class="lg:w-[80%] sm:mr-3 md:flex"/>
+                <BasicEntry title="HSSC (FSC)" :value="singleStudent.fsc_marks" :underlineControl="width > '768' ? false : true" class="lg:w-[80%] sm:mr-3 md:flex"/>
             </div>
             <div class="h-full sm:basis-1/2">
-                <BasicEntry title="SSC (Matric)" :value="singleStudent.matric_marks*100 + '%'" :underlineControl="width > '768' ? false : true" class="lg:w-[80%] md:flex"/>
+                <BasicEntry title="SSC (Matric)" :value="singleStudent.matric_marks" :underlineControl="width > '768' ? false : true" class="lg:w-[80%] md:flex"/>
             </div>
         </div>
     </div>
