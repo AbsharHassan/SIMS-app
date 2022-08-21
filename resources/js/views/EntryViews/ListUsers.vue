@@ -152,7 +152,7 @@
                         </div>
                         <div class="basis-[70%] mt-5 bg-slate-100/60 rounded-md shadow-md border-2 border-transparent hover:shadow-2xl hover:border-cyan-600 hover:bg-white/60 transition duration-500 mx-auto xl:h-[90%] overflow-y-scroll">
                             <div v-for="user in this.allUsers[0]" :key="user.id">
-                                <EntriesUser :user="user" />
+                                <EntriesUser :user="user"  :key="listFieldKey1"/>
                             </div>
                         </div>
                     </div>
@@ -164,7 +164,6 @@
 <script>
 import BasicEntry from '../../components/BasicEntry.vue'
 import SmallBasicInput from '../../components/SmallBasicInput.vue'
-// import EntriesUser from '../../components/EntriesUser.vue'
 import EntriesUser from '../../components/EntriesUsers.vue'
 import Sidebar from '../../components/Sidebar.vue'
 import Header from '../../components/Header.vue'
@@ -196,6 +195,7 @@ export default {
                 this.formFields.email = sessionStorage.getItem('CURRENT-USER-EMAIL')
                 this.formFields.name = sessionStorage.getItem('CURRENT-USER-NAME')
                 this.formFields.role = sessionStorage.getItem('CURRENT-USER-ROLE')
+                this.listFieldKey1++
             }
         },
         async onPasswordSubmit(e) {
@@ -222,11 +222,11 @@ export default {
                 password: null,
                 password_confirmation: null,
             },
+            listFieldKey1: 0,
         }
     },
     async created() {
         await this.getAllUsers()
-        console.log(this.allUsers)
     }
 }
 </script>
